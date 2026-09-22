@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0" jcr:primaryType="cq:Page">
+  <jcr:content cq:template="/libs/core/franklin/templates/page" sling:resourceType="core/franklin/components/page/v1/page" jcr:primaryType="cq:PageContent" jcr:title="Zurich American/Protective Life" modelFields="[jcr:title,jcr:description,keywords]">
+    <root jcr:primaryType="nt:unstructured" sling:resourceType="core/franklin/components/root/v1/root">
+      <section sling:resourceType="core/franklin/components/section/v1/section" jcr:primaryType="nt:unstructured" model="section" modelFields="[name,style]">
+        <block sling:resourceType="core/franklin/components/block/v1/block" jcr:primaryType="nt:unstructured" classes="banner" image="https://commonwealth.globalatlantic.com/sites/commonwealth/files/2021-09/agent_1.jpg" imageAlt="Zurich American/Protective Life" model="hero" modelFields="[image,imageAlt,text,classes]" name="Hero" text="&lt;p&gt;Quick links:&lt;/p&gt;&lt;p&gt;&lt;a href&#x3D;&quot;/policyholders&quot;&gt;Policyholders&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;a href&#x3D;&quot;/agentbrokers&quot;&gt;Agents/Brokers&lt;/a&gt;&lt;/p&gt;"></block>
+      </section>
+      <section_1 sling:resourceType="core/franklin/components/section/v1/section" jcr:primaryType="nt:unstructured" model="section" modelFields="[name,style]">
+        <title sling:resourceType="core/franklin/components/title/v1/title" jcr:primaryType="nt:unstructured" title="Zurich American/Protective Life" titleType="h1"/>
+        <text sling:resourceType="core/franklin/components/text/v1/text" jcr:primaryType="nt:unstructured" text="&lt;p&gt;Website: &lt;a href&#x3D;&quot;https://insuranceservices.se2.com/&quot;&gt;insuranceservices.se2.com&lt;/a&gt;&lt;br&gt;
+                    Phone: 800.457.9047&lt;/p&gt;&lt;p&gt;Insurance Services&lt;br&gt;
+                    PO Box 758557&lt;br&gt;
+                    Topeka, KS 66675-8557&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Overnight&lt;/strong&gt;&lt;br&gt;
+                    200 SW 6th Ave&lt;br&gt;
+                    Topeka, KS 66636-3704&lt;/p&gt;&lt;p&gt;&lt;strong&gt;List Bills&lt;/strong&gt;&lt;br&gt;
+                    Annuity Premium Reserve Account&lt;br&gt;
+                    PO Box 758558&lt;br&gt;
+                    Topeka, KS 66675-8558&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Loan Payments (PLICO)&lt;/strong&gt;&lt;br&gt;
+                    PO Box 758555&lt;br&gt;
+                    Topeka, KS 66675-8558&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Loan Payments (ZALICO)&lt;/strong&gt;&lt;br&gt;
+                    PO Box 758556&lt;br&gt;
+                    Topeka, KS 66675-8558&lt;/p&gt;"/>
+      </section_1>
+    </root>
+  </jcr:content>
+</jcr:root>

@@ -1,0 +1,89 @@
+{
+  "generated_at": "2026-09-21T00:00:00.000Z",
+  "source": "/Users/a10359614/apps/source/eds/commonwealth/blocks",
+  "blocks": [
+    {
+      "name": "header",
+      "has_model": false,
+      "description": "Site header. Loads nav content from a fragment page (default /nav, overridable via page metadata 'nav'). Splits the fragment's first three sections into nav-brand, nav-sections, nav-tools.",
+      "decorate_shape": "Fetches nav fragment; builds <nav id=\"nav\">; assigns brand/sections/tools classes by section index; marks any <li> containing a nested <ul> as .nav-drop; injects hamburger button; toggles at min-width 900px; wires Escape + focusout close and Enter/Space keyboard open.",
+      "example_structure": "Fragment doc with 3 sections: (1) brand logo/link, (2) ul menu with optional nested ul submenus, (3) tools links",
+      "signals": {
+        "media_cells": 1,
+        "text_cells": "n",
+        "nesting_depth": 3,
+        "supports_submenu": true,
+        "responsive": true
+      }
+    },
+    {
+      "name": "footer",
+      "has_model": false,
+      "description": "Site footer. Loads footer content from a fragment page (default /footer, overridable via metadata 'footer').",
+      "decorate_shape": "Fetches footer fragment, empties block, appends fragment children inside a single wrapper div. No structural transformation.",
+      "example_structure": "Fragment doc with free-form default content (paragraphs, link lists)",
+      "signals": {
+        "media_cells": 0,
+        "text_cells": "n",
+        "nesting_depth": 1,
+        "responsive": true
+      }
+    },
+    {
+      "name": "hero",
+      "has_model": true,
+      "description": "Full-width page intro. Image rendered as an absolutely-positioned background layer with an h1 overlaid on top.",
+      "decorate_shape": "NO JavaScript (hero.js is empty). Presentation is CSS-only: .hero picture is position:absolute, z-index:-1, inset:0; h1 sits above it in normal flow and is coloured with --background-color.",
+      "example_structure": "Single cell containing a picture and a heading",
+      "model_fields": ["image (reference)", "imageAlt (text)", "text (richtext)"],
+      "signals": {
+        "media_cells": 1,
+        "text_cells": 1,
+        "nesting_depth": 1,
+        "text_overlays_image": true,
+        "supports_sidebar": false,
+        "supports_image_only": false
+      }
+    },
+    {
+      "name": "cards",
+      "has_model": true,
+      "description": "Grid of cards, each with an optional image and a rich-text body.",
+      "decorate_shape": "Converts block rows to <ul>/<li>; per cell, assigns .cards-card-image when the cell's only child is a <picture>, otherwise .cards-card-body; rewrites images through createOptimizedPicture at 750px.",
+      "example_structure": "One row per card; cell 1 image, cell 2 rich text",
+      "model_fields": ["image (reference)", "text (richtext)"],
+      "signals": {
+        "media_cells": 1,
+        "text_cells": 1,
+        "nesting_depth": 2,
+        "image_optional": true,
+        "note": "Text-only cards already degrade gracefully - every cell simply becomes .cards-card-body"
+      }
+    },
+    {
+      "name": "columns",
+      "has_model": true,
+      "description": "Responsive multi-column layout; column count derived from the first row.",
+      "decorate_shape": "Adds .columns-N-cols from first row's child count; tags any column whose sole child is a picture as .columns-img-col.",
+      "example_structure": "One row, N cells; each cell free-form content",
+      "signals": {
+        "media_cells": "0-n",
+        "text_cells": "0-n",
+        "nesting_depth": 1,
+        "responsive": true
+      }
+    },
+    {
+      "name": "fragment",
+      "has_model": true,
+      "description": "Inlines another document's content at this position. The standard mechanism for content repeated across many pages.",
+      "decorate_shape": "Reads path from the block's link href (or text), fetches {path}.plain.html, runs decorateMain + loadSections on it, replaces block children with the result.",
+      "example_structure": "Single cell containing a link to the fragment document path",
+      "signals": {
+        "media_cells": 0,
+        "text_cells": 1,
+        "nesting_depth": 1
+      }
+    }
+  ]
+}

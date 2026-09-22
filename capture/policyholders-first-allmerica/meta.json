@@ -1,0 +1,46 @@
+{
+  "url": "https://commonwealth.globalatlantic.com/policyholders/first-allmerica",
+  "path": "/policyholders/first-allmerica",
+  "slug": "policyholders-first-allmerica",
+  "node_id": 46,
+  "template_hint": "company-detail",
+  "orphan": false,
+  "test_content": false,
+  "crawled_at": "2026-09-21T15:34:13.694Z",
+  "breakpoints": [
+    375,
+    768,
+    1440
+  ],
+  "page_title": "First Allmerica | commonwealth",
+  "http_status": 200,
+  "truncated": false,
+  "source_cms": "Drupal 10",
+  "screenshots": {
+    "375": "screenshots/375.png",
+    "768": "screenshots/768.png",
+    "1440": "screenshots/1440.png"
+  },
+  "images": {
+    "total": 4,
+    "emptySrc": 0,
+    "placeholder": 0,
+    "notLoaded": 0
+  },
+  "responsive_markup": {
+    "pictures": 0,
+    "mediaAttrSources": 0,
+    "srcsetImgs": 0
+  },
+  "body_text_length": 570,
+  "js_errors": [],
+  "failed_requests": [
+    {
+      "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-SFVQZCXV16&gtm=45je69g1v9119178358z89101941796za20gzb9101941796zd9101941796xf1&_p=1790004845269&gcd=13l3l3l3l1l1&npa=0&dma=0&gdid=dMDhkMT&cid=16054",
+      "reason": "net::ERR_ABORTED"
+    }
+  ],
+  "notes": [
+    "consent dismissed via #onetrust-accept-btn-handler"
+  ]
+}

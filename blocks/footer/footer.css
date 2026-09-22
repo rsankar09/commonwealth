@@ -6,15 +6,46 @@ footer {
 footer .footer > div {
   margin: auto;
   max-width: 1200px;
-  padding: 40px 24px 24px;
+  padding: 32px 16px 24px;
+  text-align: center;
 }
 
 footer .footer p {
   margin: 0;
 }
 
+footer .footer .footer-links {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0 16px;
+  margin: 0 0 8px;
+  padding: 0;
+}
+
+/* presentational divider, so the markup stays a plain list of links */
+footer .footer .footer-links li + li::before {
+  content: '';
+  display: inline-block;
+  height: 1em;
+  margin-right: 16px;
+  border-left: 1px solid currentcolor;
+  opacity: 0.4;
+  vertical-align: -0.15em;
+}
+
+footer .footer .footer-links a:any-link {
+  color: inherit;
+}
+
+footer .footer .footer-copyright {
+  color: var(--dark-color);
+  font-size: var(--body-font-size-xs);
+}
+
 @media (width >= 900px) {
   footer .footer > div {
-    padding: 40px 32px 24px;
+    padding: 32px 32px 24px;
   }
 }

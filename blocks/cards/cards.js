@@ -11,6 +11,11 @@ export default function decorate(block) {
     [...li.children].forEach((div) => {
       if (div.children.length === 1 && div.querySelector('picture')) div.className = 'cards-card-image';
       else div.className = 'cards-card-body';
+      // A card with no image still delivers the (empty) image cell, which would
+      // otherwise render as a blank box with the body's margin. Mark it so the
+      // CSS can collapse it, rather than removing it, so Universal Editor keeps
+      // the node and its instrumentation.
+      div.classList.toggle('cards-card-empty', !div.children.length && !div.textContent.trim());
     });
     ul.append(li);
   });

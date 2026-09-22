@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0" jcr:primaryType="cq:Page">
+  <jcr:content cq:template="/libs/core/franklin/templates/page" sling:resourceType="core/franklin/components/page/v1/page" jcr:primaryType="cq:PageContent" jcr:title="First Allmerica" modelFields="[jcr:title,jcr:description,keywords]">
+    <root jcr:primaryType="nt:unstructured" sling:resourceType="core/franklin/components/root/v1/root">
+      <section sling:resourceType="core/franklin/components/section/v1/section" jcr:primaryType="nt:unstructured" model="section" modelFields="[name,style]">
+        <block sling:resourceType="core/franklin/components/block/v1/block" jcr:primaryType="nt:unstructured" classes="banner" image="https://commonwealth.globalatlantic.com/sites/commonwealth/files/2021-09/agent_0.jpg" imageAlt="First Allmerica" model="hero" modelFields="[image,imageAlt,text,classes]" name="Hero" text="&lt;p&gt;Quick links:&lt;/p&gt;&lt;p&gt;&lt;a href&#x3D;&quot;/policyholders&quot;&gt;Policyholders&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;a href&#x3D;&quot;/agentbrokers&quot;&gt;Agents/Brokers&lt;/a&gt;&lt;/p&gt;"></block>
+      </section>
+      <section_1 sling:resourceType="core/franklin/components/section/v1/section" jcr:primaryType="nt:unstructured" model="section" modelFields="[name,style]">
+        <title sling:resourceType="core/franklin/components/title/v1/title" jcr:primaryType="nt:unstructured" title="First Allmerica" titleType="h1"/>
+        <text sling:resourceType="core/franklin/components/text/v1/text" jcr:primaryType="nt:unstructured" text="&lt;p&gt;Phone: 800.799.6981&lt;/p&gt;&lt;p&gt;First Allmerica Financial Service Center&lt;br&gt;
+                    PO Box 758552&lt;br&gt;
+                    Topeka, KS 66675-8552&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Overnight&lt;/strong&gt;&lt;br&gt;
+                    First Allmerica Financial Service Center&lt;br&gt;
+                    200 SW 6th Ave&lt;br&gt;
+                    Topeka, KS 66636-3704&lt;/p&gt;"/>
+      </section_1>
+    </root>
+  </jcr:content>
+</jcr:root>

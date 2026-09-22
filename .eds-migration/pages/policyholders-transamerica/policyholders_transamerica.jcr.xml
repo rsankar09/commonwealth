@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0" jcr:primaryType="cq:Page">
+  <jcr:content cq:template="/libs/core/franklin/templates/page" sling:resourceType="core/franklin/components/page/v1/page" jcr:primaryType="cq:PageContent" jcr:title="Transamerica" modelFields="[jcr:title,jcr:description,keywords]">
+    <root jcr:primaryType="nt:unstructured" sling:resourceType="core/franklin/components/root/v1/root">
+      <section sling:resourceType="core/franklin/components/section/v1/section" jcr:primaryType="nt:unstructured" model="section" modelFields="[name,style]">
+        <block sling:resourceType="core/franklin/components/block/v1/block" jcr:primaryType="nt:unstructured" classes="banner" image="https://commonwealth.globalatlantic.com/sites/commonwealth/files/2021-08/Zurich%20American-Protective%20Life_0.jpg" imageAlt="Transamerica" model="hero" modelFields="[image,imageAlt,text,classes]" name="Hero" text="&lt;p&gt;Quick links:&lt;/p&gt;&lt;p&gt;&lt;a href&#x3D;&quot;/policyholders&quot;&gt;Policyholders&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;a href&#x3D;&quot;/agentbrokers&quot;&gt;Agents/Brokers&lt;/a&gt;&lt;/p&gt;"></block>
+      </section>
+      <section_1 sling:resourceType="core/franklin/components/section/v1/section" jcr:primaryType="nt:unstructured" model="section" modelFields="[name,style]">
+        <title sling:resourceType="core/franklin/components/title/v1/title" jcr:primaryType="nt:unstructured" title="Transamerica" titleType="h1"/>
+        <text sling:resourceType="core/franklin/components/text/v1/text" jcr:primaryType="nt:unstructured" text="&lt;p&gt;Phone: 800.782.8315&lt;/p&gt;&lt;p&gt;Variable Life Service Center&lt;br&gt;
+                    PO BOX 758554&lt;br&gt;
+                    Topeka, KS 66675-8550&lt;/p&gt;"/>
+      </section_1>
+    </root>
+  </jcr:content>
+</jcr:root>

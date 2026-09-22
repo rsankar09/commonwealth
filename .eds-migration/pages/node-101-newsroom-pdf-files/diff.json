@@ -1,0 +1,21 @@
+{
+  "slug": "node-101-newsroom-pdf-files",
+  "source_text_length": 283,
+  "target_text_length": 362,
+  "dropped_words": [
+    "submitted",
+    "cwadmin",
+    "tue",
+    "2021",
+    "upload",
+    "primary",
+    "press",
+    "release",
+    "final",
+    "close"
+  ],
+  "source_assets": 4,
+  "target_assets": 4,
+  "problems": [],
+  "blockers": []
+}

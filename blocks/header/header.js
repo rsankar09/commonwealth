@@ -1,8 +1,41 @@
-import { getMetadata } from '../../scripts/aem.js';
-import { loadFragment } from '../fragment/fragment.js';
-
 // media query match that indicates mobile/tablet width
 const isDesktop = window.matchMedia('(min-width: 900px)');
+
+/**
+ * Hard-coded site chrome.
+ *
+ * The nav and footer are not authored in AEM yet, so their content lives here
+ * rather than in /nav and /footer fragment documents. Both sections are
+ * ordinary links, so swapping back to fragment-driven content later only means
+ * replacing buildNav() with a loadFragment() call - the decoration below and
+ * all of header.css work off the same DOM either way.
+ */
+const BRAND = {
+  href: '/',
+  logo: '/icons/logo.webp',
+  alt: 'Commonwealth Annuity and Life Insurance Company',
+};
+
+// Both Policyholders and Agents/Brokers expose the same five companies, each
+// under its own path prefix.
+const COMPANIES = [
+  ['Commonwealth Annuity', 'commonwealth-annuity'],
+  ['First Allmerica', 'first-allmerica'],
+  ['Zurich American/Protective Life', 'zurich-american-protective-life'],
+  ['Fidelity Mutual', 'fidelity-mutual'],
+  ['Transamerica', 'transamerica'],
+];
+
+const companyLinks = (base) => COMPANIES.map(([label, slug]) => ({ label, href: `${base}/${slug}` }));
+
+const NAV_ITEMS = [
+  { label: 'About Us', href: '/about-us' },
+  { label: 'Reinsurance Solutions', href: '/reinsurance-solutions' },
+  { label: 'Products', href: '/products' },
+  { label: 'Policyholders', href: '/policyholders', children: companyLinks('/policyholders') },
+  { label: 'Agents/Brokers', href: '/agentbrokers', children: companyLinks('/agentbrokers') },
+  { label: 'Contact', href: '/contact-us' },
+];
 
 function closeOnEscape(e) {
   if (e.code === 'Escape') {
@@ -40,7 +73,7 @@ function closeOnFocusLost(e) {
 
 function openOnKeydown(e) {
   const focused = document.activeElement;
-  const isNavDrop = focused.className === 'nav-drop';
+  const isNavDrop = focused.classList.contains('nav-drop');
   if (isNavDrop && (e.code === 'Enter' || e.code === 'Space')) {
     const dropExpanded = focused.getAttribute('aria-expanded') === 'true';
     // eslint-disable-next-line no-use-before-define
@@ -109,39 +142,91 @@ function toggleMenu(nav, navSections, forceExpanded = null) {
 }
 
 /**
+ * Builds a link, flagging it when it addresses the page currently being viewed.
+ * @param {Object} item Nav item with label and href
+ * @returns {HTMLAnchorElement} The link
+ */
+function buildLink({ label, href }) {
+  const a = document.createElement('a');
+  a.href = href;
+  a.textContent = label;
+  // strip any trailing slash so '/products/' still matches '/products'
+  const current = window.location.pathname.replace(/\/$/, '') || '/';
+  if (href === current) a.setAttribute('aria-current', 'page');
+  return a;
+}
+
+/**
+ * Builds the nav DOM in the same shape loadFragment() would have produced, so
+ * the toggle/keyboard helpers and header.css need no special casing.
+ * @returns {DocumentFragment} brand and sections wrappers
+ */
+function buildNav() {
+  const frag = document.createDocumentFragment();
+
+  const brand = document.createElement('div');
+  brand.className = 'nav-brand';
+  const brandWrapper = document.createElement('div');
+  brandWrapper.className = 'default-content-wrapper';
+  const brandP = document.createElement('p');
+  const brandLink = document.createElement('a');
+  brandLink.href = BRAND.href;
+  brandLink.setAttribute('aria-label', BRAND.alt);
+  const logo = document.createElement('img');
+  logo.src = BRAND.logo;
+  logo.alt = BRAND.alt;
+  logo.width = 305;
+  logo.height = 51;
+  // the logo is the LCP candidate on every page, so it must not be lazy
+  logo.loading = 'eager';
+  brandLink.append(logo);
+  brandP.append(brandLink);
+  brandWrapper.append(brandP);
+  brand.append(brandWrapper);
+
+  const sections = document.createElement('div');
+  sections.className = 'nav-sections';
+  const sectionsWrapper = document.createElement('div');
+  sectionsWrapper.className = 'default-content-wrapper';
+  const ul = document.createElement('ul');
+  NAV_ITEMS.forEach((item) => {
+    const li = document.createElement('li');
+    li.append(buildLink(item));
+    if (item.children) {
+      const subUl = document.createElement('ul');
+      item.children.forEach((child) => {
+        const subLi = document.createElement('li');
+        subLi.append(buildLink(child));
+        subUl.append(subLi);
+      });
+      li.append(subUl);
+    }
+    ul.append(li);
+  });
+  sectionsWrapper.append(ul);
+  sections.append(sectionsWrapper);
+
+  frag.append(brand, sections);
+  return frag;
+}
+
+/**
  * loads and decorates the header, mainly the nav
  * @param {Element} block The header block element
  */
 export default async function decorate(block) {
-  // load nav as fragment
-  const navMeta = getMetadata('nav');
-  const navPath = navMeta ? new URL(navMeta, window.location).pathname : '/nav';
-  const fragment = await loadFragment(navPath);
-
-  // decorate nav DOM
   block.textContent = '';
   const nav = document.createElement('nav');
   nav.id = 'nav';
-  while (fragment.firstElementChild) nav.append(fragment.firstElementChild);
-
-  const classes = ['brand', 'sections', 'tools'];
-  classes.forEach((c, i) => {
-    const section = nav.children[i];
-    if (section) section.classList.add(`nav-${c}`);
-  });
-
-  const navBrand = nav.querySelector('.nav-brand');
-  const brandLink = navBrand.querySelector('.button');
-  if (brandLink) {
-    brandLink.className = '';
-    brandLink.closest('.button-container').className = '';
-  }
+  nav.append(buildNav());
 
   const navSections = nav.querySelector('.nav-sections');
   if (navSections) {
     navSections.querySelectorAll(':scope .default-content-wrapper > ul > li').forEach((navSection) => {
       if (navSection.querySelector('ul')) navSection.classList.add('nav-drop');
-      navSection.addEventListener('click', () => {
+      navSection.addEventListener('click', (e) => {
+        // let clicks on the section's own links navigate instead of toggling
+        if (e.target.closest('a') && !isDesktop.matches) return;
         if (isDesktop.matches) {
           const expanded = navSection.getAttribute('aria-expanded') === 'true';
           toggleAllNavSections(navSections);

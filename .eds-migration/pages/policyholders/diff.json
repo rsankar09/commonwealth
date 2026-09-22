@@ -1,0 +1,16 @@
+{
+  "slug": "policyholders",
+  "source_text_length": 3520,
+  "target_text_length": 3566,
+  "dropped_words": [],
+  "source_assets": 1,
+  "target_assets": 1,
+  "problems": [],
+  "blockers": [
+    "/fragments/policy-prefix/commonwealth-annuity: block 'Table' is not in /blocks — port it before importing",
+    "/fragments/policy-prefix/zurich: block 'Table' is not in /blocks — port it before importing",
+    "/fragments/policy-prefix/transamerica: block 'Table' is not in /blocks — port it before importing",
+    "/fragments/policy-prefix/first-allmerica: block 'Table' is not in /blocks — port it before importing",
+    "/fragments/policy-prefix/fidelity-mutual: block 'Table' is not in /blocks — port it before importing"
+  ]
+}

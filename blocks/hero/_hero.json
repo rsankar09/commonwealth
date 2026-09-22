@@ -39,7 +39,25 @@
           "name": "text",
           "value": "",
           "label": "Text",
+          "description": "Heading shown over the image. In the Banner style this is the grey side panel instead: a short label plus the links, which render as buttons.",
           "valueType": "string"
+        },
+        {
+          "component": "select",
+          "name": "classes",
+          "label": "Style",
+          "valueType": "string",
+          "value": "",
+          "options": [
+            {
+              "name": "Default",
+              "value": ""
+            },
+            {
+              "name": "Banner",
+              "value": "banner"
+            }
+          ]
         }
       ]
     }

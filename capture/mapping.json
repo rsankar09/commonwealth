@@ -1,0 +1,220 @@
+[
+  {
+    "component_id": "site-nav",
+    "component_key": "site-nav",
+    "type_guess": "nav",
+    "occurrences": 23,
+    "pages": "all 23",
+    "verdict": "reuse",
+    "auto_approvable": true,
+    "candidates": [
+      {
+        "block_name": "header",
+        "source": "internal",
+        "score": 0.89,
+        "rationale": "Drupal nav is logo + flat ul.menu with two nested submenus (Policyholders, Agents/Brokers) + a mobile .menu-icon. The boilerplate header covers every one of those: it marks any li containing a nested ul as .nav-drop, and injects its own hamburger below 900px.",
+        "gaps": []
+      },
+      { "block_name": "header", "source": "public", "score": 0.89, "rationale": "Identical to the internal copy; no reason to re-vendor." },
+      { "block_name": "columns", "source": "internal", "score": 0.18, "rationale": "Could lay out nav items, but carries no nav semantics, keyboard handling or mobile toggle." }
+    ],
+    "status": "implemented",
+    "migration_note": "IMPLEMENTED as a hard-coded block (blocks/header/header.js). Content is NOT authored in AEM yet, so the nav lives in a NAV_ITEMS array in the block rather than in a /nav fragment document; buildNav() emits the same DOM loadFragment() would have, so switching to fragment-driven content later is a one-function change. Covers all 6 top-level items and both 5-company submenus, with aria-current set from the URL. Logo extracted from the source site to icons/logo.webp. The Drupal data-drupal-link-system-path and is-active attributes are dropped."
+  },
+  {
+    "component_id": "page-footer",
+    "component_key": "page-footer",
+    "type_guess": "footer",
+    "occurrences": 23,
+    "pages": "all 23",
+    "verdict": "reuse",
+    "auto_approvable": true,
+    "candidates": [
+      {
+        "block_name": "footer",
+        "source": "internal",
+        "score": 0.92,
+        "rationale": "Source footer is two paragraphs - a pipe-separated link pair (Disclosures | Privacy Policy) and a copyright line. The boilerplate footer passes fragment content through untouched, which is exactly what this needs.",
+        "gaps": []
+      },
+      { "block_name": "footer", "source": "public", "score": 0.92, "rationale": "Identical to the internal copy." }
+    ],
+    "status": "implemented",
+    "migration_note": "IMPLEMENTED as a hard-coded block (blocks/footer/footer.js). Content is NOT authored in AEM yet, so the links and copyright live in the block rather than in a /footer fragment document; buildFooter() is a one-function swap when content lands. The link pair is rendered as a list with CSS-drawn dividers rather than literal '|' characters, and the external Privacy Policy link carries rel=noopener noreferrer. OPEN QUESTION: the copyright still reads 2014 as in the source - confirm the intended year with the client before publishing."
+  },
+  {
+    "component_id": "page-banner",
+    "component_key": "page-banner",
+    "type_guess": "hero",
+    "occurrences": 20,
+    "pages": "all except node-101-newsroom-pdf-files, node-71-testing-1, node-76-test-2",
+    "verdict": "extend",
+    "auto_approvable": false,
+    "decomposition": [
+      {
+        "part": "banner image",
+        "target_block": "hero",
+        "action": "extend",
+        "reason": "Per-page image, no text over it."
+      },
+      {
+        "part": "login/quick-links sidebar",
+        "target_block": "fragment",
+        "action": "reuse",
+        "reason": "Byte-identical on all 20 pages apart from its heading label; belongs in one fragment document, not 20 copies."
+      }
+    ],
+    "candidates": [
+      {
+        "block_name": "hero",
+        "source": "internal",
+        "score": 0.44,
+        "rationale": "Shares the 'full-width banner image at top of page' intent, but the contracts diverge: hero absolutely positions the picture behind an overlaid h1, while every one of the 20 captured banners is image-only with a text sidebar beside it.",
+        "gaps": [
+          "image-only variant - hero.css styles h1 over the image and there is no heading in any captured banner",
+          "side-by-side layout - source is a 3-col sidebar + 9-col image, hero is single-column full-bleed",
+          "hero model requires a text richtext field that would sit empty on all 20 pages"
+        ]
+      },
+      {
+        "block_name": "columns",
+        "source": "internal",
+        "score": 0.58,
+        "rationale": "Structurally the closer match to the raw markup - a 2-cell row that is text on the left and a picture on the right, which is exactly what columns renders and it already tags the image cell .columns-img-col.",
+        "gaps": ["3/9 column ratio (columns splits evenly)", "still bakes the repeated sidebar into every page"]
+      },
+      {
+        "block_name": "fragment",
+        "source": "internal",
+        "score": 0.80,
+        "rationale": "Scored against the sidebar half only. The sidebar is site-wide chrome and fragment is the boilerplate's designed answer for content repeated across pages.",
+        "gaps": []
+      }
+    ],
+    "migration_note": "The 0.6 detector confidence was warranted - this is not one component. Recommended split: (a) the banner image becomes hero with an image-only variant, adding a CSS rule that drops the absolute positioning when the block has no heading, and making the model's text field optional; (b) the sidebar becomes a single /fragment/login-links document referenced once per page, or lifted into the section template. Two label variants exist across the 20 pages - 'Please choose your login:' and 'Quick links:' - both wrapping the same two links (/policyholders, /agentbrokers), so the fragment needs one heading variant, not twenty copies. Crop check (home/cmp-002.png) confirms no text sits over the image and that the two sidebar links render as solid buttons - author them as standalone links in their own paragraphs so the boilerplate button decoration picks them up, rather than porting the Drupal button CSS."
+  },
+  {
+    "component_id": "company-link-columns",
+    "component_key": "company-link-columns",
+    "type_guess": "other",
+    "occurrences": 2,
+    "pages": "policyholders, agentbrokers",
+    "verdict": "extend",
+    "auto_approvable": false,
+    "candidates": [
+      {
+        "block_name": "cards",
+        "source": "internal",
+        "score": 0.64,
+        "rationale": "Semantically a set of five company tiles, each an h4 company name, an italic former-name note, and a group of links (policy-prefix trigger, Contact Info, Login). cards already handles text-only items - with no picture present every cell just becomes .cards-card-body - so the JS needs no change.",
+        "gaps": [
+          "text-only card styling (current CSS assumes an image sits above the body)",
+          "link-group / CTA-row treatment inside the card body",
+          "one link per card is a modal trigger and must survive the transform as a fragment-path link"
+        ]
+      },
+      {
+        "block_name": "columns",
+        "source": "internal",
+        "score": 0.49,
+        "rationale": "Matches the literal left/right bottom-section markup, but models the companies as layout slots rather than as a repeatable list, which authors would find harder to extend to a sixth company."
+      },
+      {
+        "block_name": "accordion",
+        "source": "public",
+        "score": 0.30,
+        "rationale": "An alternative for collapsing the five companies on mobile, but changes the visual design rather than reproducing it."
+      }
+    ],
+    "migration_note": "Extend cards with a text-only variant. This is mostly a CSS change plus a model tweak to make the image field optional; cards.js is already tolerant. Pairs with policy-prefix-modal - the 'Find your policy by product or prefix' link in each card is that modal's trigger."
+  },
+  {
+    "component_id": "policy-prefix-modal",
+    "component_key": "policy-prefix-modal",
+    "type_guess": "other",
+    "occurrences": 2,
+    "pages": "policyholders, agentbrokers",
+    "verdict": "reuse",
+    "auto_approvable": false,
+    "requires_port": true,
+    "candidates": [
+      {
+        "block_name": "modal",
+        "source": "public",
+        "score": 0.81,
+        "rationale": "Purpose-built for this: the block collection modal loads its body from a fragment document and turns links pointing at that path into triggers, which maps cleanly onto the current data-target-id wiring. It also supplies the dialog semantics, focus trap and Escape handling the hand-rolled Drupal popup lacks.",
+        "gaps": [
+          "not yet present in /blocks - must be vendored into the repo",
+          "fixed 860x600px inline sizing must become responsive CSS",
+          "duplicate .popup-close spans in the source collapse to the block's single close control"
+        ]
+      },
+      {
+        "block_name": "fragment",
+        "source": "internal",
+        "score": 0.55,
+        "rationale": "Carries the modal bodies as separate documents, but provides no overlay behaviour on its own - it is the content half of the modal solution, not a substitute."
+      },
+      {
+        "block_name": "accordion",
+        "source": "public",
+        "score": 0.34,
+        "rationale": "A no-JS-dialog fallback that would inline the prefix tables instead of overlaying them; worth considering only if the client wants to drop the popup pattern."
+      }
+    ],
+    "migration_note": "Five modals per page (commonwealth-annuity, first-allmerica, zurich, fidelity-mutual, transamerica) holding 8 product-prefix tables in total, each ~30+ rows of product-name/prefix pairs. The tables themselves are plain default content and need no block. Author each modal body as its own fragment document and point the card trigger links at it. Verdict is 'reuse' of a public block but it still requires a port into /blocks, so it is gated rather than auto-approved. Crop check (policyholders/crops/modal-open.png) shows the side-by-side tables are one logical Product/Prefix list split into two columns purely to control dialog height - author it as a single table and let CSS columnise, otherwise authors must manually rebalance both halves whenever a product is added."
+  },
+  {
+    "component_id": "pdf-link-list",
+    "component_key": "pdf-link-list",
+    "type_guess": "other",
+    "occurrences": 1,
+    "pages": "newsroom",
+    "verdict": "reuse",
+    "no_block_required": true,
+    "auto_approvable": true,
+    "candidates": [
+      {
+        "block_name": "default-content (list + links)",
+        "source": "core",
+        "score": 0.90,
+        "rationale": "A ul of li, each an inline PDF icon image plus a link to a .pdf. That is ordinary default content - EDS decorates lists and links natively, so introducing a block here would add authoring friction for no gain.",
+        "gaps": []
+      },
+      {
+        "block_name": "cards",
+        "source": "internal",
+        "score": 0.22,
+        "rationale": "Over-modelled for a flat list of document links."
+      }
+    ],
+    "migration_note": "No block authoring. Drop the repeated inline pdf_icon.gif images and attach the icon in global CSS via a[href$='.pdf'] - that removes a per-item image from the content and keeps the icon consistent. Source markup is inconsistent here (some items carry class='icon', some do not, alt text alternates between 'pdf-icon' and 'PDF Icon'), which the transform should normalise."
+  },
+  {
+    "component_id": "pdf-file-field",
+    "component_key": "pdf-file-field",
+    "type_guess": "other",
+    "occurrences": 1,
+    "pages": "node-101-newsroom-pdf-files",
+    "verdict": "reuse",
+    "no_block_required": true,
+    "auto_approvable": true,
+    "same_target_as": "pdf-link-list",
+    "candidates": [
+      {
+        "block_name": "default-content (list + links)",
+        "source": "core",
+        "score": 0.86,
+        "rationale": "A Drupal file-field widget wrapper ('Upload PDF files' label + field__items of file links) around the same authorial intent as pdf-link-list: a list of PDF downloads. The Drupal chrome is presentation scaffolding with no counterpart in EDS.",
+        "gaps": []
+      },
+      {
+        "block_name": "table",
+        "source": "public",
+        "score": 0.20,
+        "rationale": "Only if the client wants file size/date columns alongside each document, which the source does not carry."
+      }
+    ],
+    "migration_note": "No block authoring. Collapses to the same output as pdf-link-list, so both should share one transform rule. Link text is currently the raw filename (Primary_Press_Release_Final.pdf) - the transform should substitute human-readable titles, which the newsroom page already provides for the same two documents."
+  }
+]

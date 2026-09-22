@@ -1,0 +1,34 @@
+{
+  "generated_at": "2026-09-21T00:00:00.000Z",
+  "sources": [
+    "https://github.com/adobe/aem-block-collection (blocks/ listing via GitHub API)",
+    "https://www.aem.live/developer/block-collection (descriptions)"
+  ],
+  "refresh_policy": "Rebuild when older than ~30 days or on explicit request.",
+  "fetch_notes": "raw.githubusercontent.com is intercepted by the corporate Zscaler proxy on this machine; the GitHub REST API (api.github.com) works. Block source bodies could not be fetched directly - descriptions below come from the aem.live block-collection docs, so decorate_shape is summarised rather than read from source.",
+  "blocks": [
+    {
+      "name": "modal",
+      "description": "Overlay popup. Modal content is authored as a separate fragment document; links pointing at that path are turned into modal triggers.",
+      "decorate_shape": "Exports createModal/openModal helpers; builds a <dialog>, loads the fragment content into it, wires close button, Escape key and backdrop click, and manages focus trapping.",
+      "example_structure": "A link whose href is the path of a fragment document holding the modal body",
+      "signals": { "nesting_depth": 2, "content_from_fragment": true, "a11y_dialog": true }
+    },
+    { "name": "accordion", "description": "Expandable/collapsible content sections.", "example_structure": "One row per item; cell 1 summary, cell 2 body", "signals": { "nesting_depth": 2 } },
+    { "name": "carousel", "description": "Slideshow of images with optional text.", "example_structure": "One row per slide", "signals": { "media_cells": 1, "nesting_depth": 2 } },
+    { "name": "table", "description": "Renders tabular data as a semantic HTML table.", "example_structure": "Header row plus data rows", "signals": { "nesting_depth": 1 } },
+    { "name": "tabs", "description": "Segments content into selectable panels.", "example_structure": "One row per tab; cell 1 label, cell 2 panel", "signals": { "nesting_depth": 2 } },
+    { "name": "search", "description": "Site content search over the query index.", "signals": { "nesting_depth": 1 } },
+    { "name": "video", "description": "Direct video playback from a link.", "signals": { "media_cells": 1 } },
+    { "name": "embed", "description": "Embeds third-party/social content from a URL.", "signals": { "media_cells": 1 } },
+    { "name": "quote", "description": "Highlights a quotation with attribution.", "signals": { "text_cells": 2 } },
+    { "name": "breadcrumbs", "description": "Navigation hierarchy trail, derived from path.", "signals": { "nesting_depth": 1 } },
+    { "name": "form", "description": "Input controls. DEPRECATED in the block collection - do not adopt for new work.", "deprecated": true },
+    { "name": "cards", "description": "Public equivalent of the internal cards block.", "signals": { "media_cells": 1, "text_cells": 1 } },
+    { "name": "columns", "description": "Public equivalent of the internal columns block.", "signals": { "nesting_depth": 1 } },
+    { "name": "hero", "description": "Public equivalent of the internal hero block.", "signals": { "media_cells": 1, "text_cells": 1 } },
+    { "name": "header", "description": "Public equivalent of the internal header block.", "signals": { "nesting_depth": 3 } },
+    { "name": "footer", "description": "Public equivalent of the internal footer block.", "signals": { "nesting_depth": 1 } },
+    { "name": "fragment", "description": "Public equivalent of the internal fragment block.", "signals": { "nesting_depth": 1 } }
+  ]
+}

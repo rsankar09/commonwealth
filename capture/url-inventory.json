@@ -1,0 +1,45 @@
+{
+  "origin": "https://commonwealth.globalatlantic.com",
+  "source_cms": "Drupal 10",
+  "note": "Alias inventory discovered during crawl. Every canonical page is reachable via three URL forms: the path alias, /node/<id>, and /index.php/<alias>. The EDS migration needs redirects from the non-canonical forms.",
+  "canonical_pages": [
+    { "canonical": "/",                                             "node": 1,   "also_served_at": ["/node/1", "/index.php/node/1"] },
+    { "canonical": "/about-us",                                     "node": 26,  "also_served_at": ["/node/26", "/index.php/about-us", "/index.php/node/26"] },
+    { "canonical": "/reinsurance-solutions",                        "node": 31,  "also_served_at": ["/node/31", "/index.php/reinsurance-solutions", "/index.php/node/31"] },
+    { "canonical": "/products",                                     "node": 36,  "also_served_at": ["/node/36", "/index.php/products", "/index.php/node/36"] },
+    { "canonical": "/policyholders",                                "node": 6,   "also_served_at": ["/node/6", "/index.php/policyholders", "/index.php/node/6"] },
+    { "canonical": "/policyholders/commonwealth-annuity",           "node": 41,  "also_served_at": ["/node/41", "/index.php/policyholders/commonwealth-annuity"] },
+    { "canonical": "/policyholders/first-allmerica",                "node": 46,  "also_served_at": ["/node/46", "/index.php/policyholders/first-allmerica"] },
+    { "canonical": "/policyholders/zurich-american-protective-life","node": 51,  "also_served_at": ["/node/51", "/index.php/policyholders/zurich-american-protective-life"] },
+    { "canonical": "/policyholders/fidelity-mutual",                "node": 56,  "also_served_at": ["/node/56", "/index.php/policyholders/fidelity-mutual"] },
+    { "canonical": "/policyholders/transamerica",                   "node": 61,  "also_served_at": ["/node/61", "/index.php/policyholders/transamerica"] },
+    { "canonical": "/agentbrokers",                                 "node": 11,  "also_served_at": ["/node/11", "/index.php/agentbrokers", "/index.php/node/11"] },
+    { "canonical": "/agentbrokers/commonwealth-annuity",            "node": 106, "also_served_at": ["/node/106", "/index.php/agentbrokers/commonwealth-annuity"] },
+    { "canonical": "/agentbrokers/first-allmerica",                 "node": 111, "also_served_at": ["/node/111", "/index.php/agentbrokers/first-allmerica"] },
+    { "canonical": "/agentbrokers/zurich-american-protective-life", "node": 116, "also_served_at": ["/node/116", "/index.php/agentbrokers/zurich-american-protective-life"] },
+    { "canonical": "/agentbrokers/fidelity-mutual",                 "node": 121, "also_served_at": ["/node/121", "/index.php/agentbrokers/fidelity-mutual"] },
+    { "canonical": "/agentbrokers/transamerica",                    "node": 126, "also_served_at": ["/node/126", "/index.php/agentbrokers/transamerica"] },
+    { "canonical": "/contact-us",                                   "node": 66,  "also_served_at": ["/node/66", "/index.php/contact-us", "/index.php/node/66"] },
+    { "canonical": "/disclosures",                                  "node": 16,  "also_served_at": ["/node/16", "/index.php/disclosures"] },
+    { "canonical": "/newsroom",                                     "node": 96,  "also_served_at": ["/node/96", "/index.php/newsroom"] }
+  ],
+  "orphan_pages": [
+    { "path": "/node/101", "title": "Newroom PDF files", "note": "No path alias, not linked from any crawled page. Real content — confirm intent before dropping." },
+    { "path": "/node/71",  "title": "testing 1",         "test_content": true },
+    { "path": "/node/76",  "title": "Test 2",            "test_content": true },
+    { "path": "/node/161", "title": "Drupal 9 Test",     "test_content": true }
+  ],
+  "skipped_access_denied": [
+    { "path": "/node/21", "reason": "Access denied — unpublished or role-restricted" },
+    { "path": "/node/81", "reason": "Access denied — unpublished or role-restricted" },
+    { "path": "/node/86", "reason": "Access denied — unpublished or role-restricted" },
+    { "path": "/node/91", "reason": "Access denied — unpublished or role-restricted" }
+  ],
+  "discovery_method": {
+    "sitemap": "absent — /sitemap.xml, /sitemap_index.xml, /sitemap/default/sitemap.xml all 404",
+    "robots_txt": "present, declares no Sitemap directive",
+    "link_graph_bfs": "depth 4 from /, 19 canonical pages found",
+    "node_id_probe": "/node/1..200 — surfaced 4 orphans and 4 access-denied nodes the link graph missed"
+  },
+  "node_id_probe_range": "1-200 (all live nodes are multiples of 5; highest found 161)"
+}

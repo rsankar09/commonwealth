@@ -1,0 +1,8 @@
+URL	image	robots
+/**	/default-meta-image.png	
+/policyholders/**	/assets/og/policyholders-1200x630.png	
+/agentbrokers/**	/assets/og/agents-brokers-1200x630.png	
+/newsroom	/assets/og/newsroom-1200x630.png	
+/fragments/**		noindex, nofollow
+/node/**		noindex, nofollow
+/drafts/**		noindex, nofollow

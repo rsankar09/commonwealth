@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0" jcr:primaryType="cq:Page">
+  <jcr:content cq:template="/libs/core/franklin/templates/page" sling:resourceType="core/franklin/components/page/v1/page" jcr:primaryType="cq:PageContent" jcr:title="Fidelity Mutual" modelFields="[jcr:title,jcr:description,keywords]">
+    <root jcr:primaryType="nt:unstructured" sling:resourceType="core/franklin/components/root/v1/root">
+      <section sling:resourceType="core/franklin/components/section/v1/section" jcr:primaryType="nt:unstructured" model="section" modelFields="[name,style]">
+        <block sling:resourceType="core/franklin/components/block/v1/block" jcr:primaryType="nt:unstructured" classes="banner" image="https://commonwealth.globalatlantic.com/sites/commonwealth/files/2021-08/cwa_banner_anim_701x215_04.jpg" imageAlt="Fidelity Mutual" model="hero" modelFields="[image,imageAlt,text,classes]" name="Hero" text="&lt;p&gt;Quick links:&lt;/p&gt;&lt;p&gt;&lt;a href&#x3D;&quot;/policyholders&quot;&gt;Policyholders&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;a href&#x3D;&quot;/agentbrokers&quot;&gt;Agents/Brokers&lt;/a&gt;&lt;/p&gt;"></block>
+      </section>
+      <section_1 sling:resourceType="core/franklin/components/section/v1/section" jcr:primaryType="nt:unstructured" model="section" modelFields="[name,style]">
+        <title sling:resourceType="core/franklin/components/title/v1/title" jcr:primaryType="nt:unstructured" title="Fidelity Mutual" titleType="h1"/>
+        <text sling:resourceType="core/franklin/components/text/v1/text" jcr:primaryType="nt:unstructured" text="&lt;p&gt;Phone: 866.553.5961&lt;/p&gt;&lt;p&gt;Commonwealth Annuity&lt;br&gt;
+                    PO Box 83047&lt;br&gt;
+                    Lincoln, NE 68501-3047&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Overnight&lt;/strong&gt;&lt;br&gt;
+                    777 Research Drive&lt;br&gt;
+                    Lincoln, NE 68521&lt;/p&gt;"/>
+      </section_1>
+    </root>
+  </jcr:content>
+</jcr:root>

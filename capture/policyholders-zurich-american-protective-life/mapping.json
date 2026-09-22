@@ -1,0 +1,106 @@
+[
+  {
+    "component_id": "cmp-001",
+    "component_key": "site-nav",
+    "verdict": "reuse",
+    "auto_approvable": true,
+    "candidates": [
+      {
+        "block_name": "header",
+        "source": "internal",
+        "score": 0.89,
+        "rationale": "Drupal nav is logo + flat ul.menu with two nested submenus (Policyholders, Agents/Brokers) + a mobile .menu-icon. The boilerplate header covers every one of those: it marks any li containing a nested ul as .nav-drop, and injects its own hamburger below 900px.",
+        "gaps": []
+      },
+      {
+        "block_name": "header",
+        "source": "public",
+        "score": 0.89,
+        "rationale": "Identical to the internal copy; no reason to re-vendor."
+      },
+      {
+        "block_name": "columns",
+        "source": "internal",
+        "score": 0.18,
+        "rationale": "Could lay out nav items, but carries no nav semantics, keyboard handling or mobile toggle."
+      }
+    ],
+    "migration_note": "IMPLEMENTED as a hard-coded block (blocks/header/header.js). Content is NOT authored in AEM yet, so the nav lives in a NAV_ITEMS array in the block rather than in a /nav fragment document; buildNav() emits the same DOM loadFragment() would have, so switching to fragment-driven content later is a one-function change. Covers all 6 top-level items and both 5-company submenus, with aria-current set from the URL. Logo extracted from the source site to icons/logo.webp. The Drupal data-drupal-link-system-path and is-active attributes are dropped.",
+    "screenshot_crop": "capture/policyholders-zurich-american-protective-life/crops/cmp-001.png"
+  },
+  {
+    "component_id": "cmp-002",
+    "component_key": "page-banner",
+    "verdict": "extend",
+    "auto_approvable": false,
+    "decomposition": [
+      {
+        "part": "banner image",
+        "target_block": "hero",
+        "action": "extend",
+        "reason": "Per-page image, no text over it."
+      },
+      {
+        "part": "login/quick-links sidebar",
+        "target_block": "fragment",
+        "action": "reuse",
+        "reason": "Byte-identical on all 20 pages apart from its heading label; belongs in one fragment document, not 20 copies."
+      }
+    ],
+    "candidates": [
+      {
+        "block_name": "hero",
+        "source": "internal",
+        "score": 0.44,
+        "rationale": "Shares the 'full-width banner image at top of page' intent, but the contracts diverge: hero absolutely positions the picture behind an overlaid h1, while every one of the 20 captured banners is image-only with a text sidebar beside it.",
+        "gaps": [
+          "image-only variant - hero.css styles h1 over the image and there is no heading in any captured banner",
+          "side-by-side layout - source is a 3-col sidebar + 9-col image, hero is single-column full-bleed",
+          "hero model requires a text richtext field that would sit empty on all 20 pages"
+        ]
+      },
+      {
+        "block_name": "columns",
+        "source": "internal",
+        "score": 0.58,
+        "rationale": "Structurally the closer match to the raw markup - a 2-cell row that is text on the left and a picture on the right, which is exactly what columns renders and it already tags the image cell .columns-img-col.",
+        "gaps": [
+          "3/9 column ratio (columns splits evenly)",
+          "still bakes the repeated sidebar into every page"
+        ]
+      },
+      {
+        "block_name": "fragment",
+        "source": "internal",
+        "score": 0.8,
+        "rationale": "Scored against the sidebar half only. The sidebar is site-wide chrome and fragment is the boilerplate's designed answer for content repeated across pages.",
+        "gaps": []
+      }
+    ],
+    "migration_note": "The 0.6 detector confidence was warranted - this is not one component. Recommended split: (a) the banner image becomes hero with an image-only variant, adding a CSS rule that drops the absolute positioning when the block has no heading, and making the model's text field optional; (b) the sidebar becomes a single /fragment/login-links document referenced once per page, or lifted into the section template. Two label variants exist across the 20 pages - 'Please choose your login:' and 'Quick links:' - both wrapping the same two links (/policyholders, /agentbrokers), so the fragment needs one heading variant, not twenty copies. Crop check (home/cmp-002.png) confirms no text sits over the image and that the two sidebar links render as solid buttons - author them as standalone links in their own paragraphs so the boilerplate button decoration picks them up, rather than porting the Drupal button CSS.",
+    "screenshot_crop": "capture/policyholders-zurich-american-protective-life/crops/cmp-002.png"
+  },
+  {
+    "component_id": "cmp-003",
+    "component_key": "page-footer",
+    "verdict": "reuse",
+    "auto_approvable": true,
+    "candidates": [
+      {
+        "block_name": "footer",
+        "source": "internal",
+        "score": 0.92,
+        "rationale": "Source footer is two paragraphs - a pipe-separated link pair (Disclosures | Privacy Policy) and a copyright line. The boilerplate footer passes fragment content through untouched, which is exactly what this needs.",
+        "gaps": []
+      },
+      {
+        "block_name": "footer",
+        "source": "public",
+        "score": 0.92,
+        "rationale": "Identical to the internal copy."
+      }
+    ],
+    "migration_note": "IMPLEMENTED as a hard-coded block (blocks/footer/footer.js). Content is NOT authored in AEM yet, so the links and copyright live in the block rather than in a /footer fragment document; buildFooter() is a one-function swap when content lands. The link pair is rendered as a list with CSS-drawn dividers rather than literal '|' characters, and the external Privacy Policy link carries rel=noopener noreferrer. OPEN QUESTION: the copyright still reads 2014 as in the source - confirm the intended year with the client before publishing.",
+    "screenshot_crop": "capture/policyholders-zurich-american-protective-life/crops/cmp-003.png"
+  }
+]

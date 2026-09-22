@@ -1,0 +1,1167 @@
+[
+  {
+    "slug": "about-us",
+    "url": "https://commonwealth.globalatlantic.com/about-us",
+    "docs": [
+      {
+        "path": "/about-us",
+        "blocks": [
+          "Hero (banner) [2r]",
+          "Columns [1r]",
+          "Metadata [1r]"
+        ],
+        "jcr": {
+          "jcr:content": [
+            "cq:template",
+            "modelFields"
+          ],
+          "root": [],
+          "section": [
+            "model",
+            "modelFields"
+          ],
+          "block": [
+            "classes",
+            "image",
+            "imageAlt",
+            "model",
+            "modelFields",
+            "name",
+            "text"
+          ],
+          "section_1": [
+            "model",
+            "modelFields"
+          ],
+          "columns": [
+            "rows",
+            "columns"
+          ],
+          "title": [
+            "title",
+            "titleType"
+          ],
+          "text": [
+            "text"
+          ],
+          "title_1": [
+            "title",
+            "titleType"
+          ],
+          "text_1": [
+            "text"
+          ],
+          "title_2": [
+            "title",
+            "titleType"
+          ],
+          "text_2": [
+            "text"
+          ]
+        }
+      }
+    ],
+    "problems": [],
+    "blockers": [],
+    "dropped": [],
+    "assets": [
+      "https://commonwealth.globalatlantic.com/sites/commonwealth/files/2021-08/disclosure_2.jpg"
+    ]
+  },
+  {
+    "slug": "agentbrokers",
+    "url": "https://commonwealth.globalatlantic.com/agentbrokers",
+    "docs": [
+      {
+        "path": "/agentbrokers",
+        "blocks": [
+          "Hero (banner) [2r]",
+          "Cards (companies) [5r]",
+          "Metadata [1r]"
+        ],
+        "jcr": {
+          "jcr:content": [
+            "cq:template",
+            "modelFields"
+          ],
+          "root": [],
+          "section": [
+            "model",
+            "modelFields"
+          ],
+          "block": [
+            "classes",
+            "filter",
+            "model",
+            "modelFields",
+            "name"
+          ],
+          "section_1": [
+            "model",
+            "modelFields"
+          ],
+          "title": [
+            "title",
+            "titleType"
+          ],
+          "text": [
+            "text"
+          ],
+          "item_0": [
+            "name",
+            "model",
+            "modelFields",
+            "text"
+          ],
+          "item_1": [
+            "name",
+            "model",
+            "modelFields",
+            "text"
+          ],
+          "item_2": [
+            "name",
+            "model",
+            "modelFields",
+            "text"
+          ],
+          "item_3": [
+            "name",
+            "model",
+            "modelFields",
+            "text"
+          ],
+          "item_4": [
+            "name",
+            "model",
+            "modelFields",
+            "text"
+          ]
+        }
+      },
+      {
+        "path": "/fragments/agent-prefix/commonwealth-annuity",
+        "blocks": [
+          "Table [39r]"
+        ],
+        "jcr": null
+      },
+      {
+        "path": "/fragments/agent-prefix/zurich",
+        "blocks": [
+          "Table [25r]"
+        ],
+        "jcr": null
+      },
+      {
+        "path": "/fragments/agent-prefix/transamerica",
+        "blocks": [
+          "Table [2r]"
+        ],
+        "jcr": null
+      },
+      {
+        "path": "/fragments/agent-prefix/first-allmerica",
+        "blocks": [
+          "Table [2r]"
+        ],
+        "jcr": null
+      },
+      {
+        "path": "/fragments/agent-prefix/fidelity-mutual",
+        "blocks": [
+          "Table [16r]"
+        ],
+        "jcr": null
+      }
+    ],
+    "problems": [],
+    "blockers": [
+      "/fragments/agent-prefix/commonwealth-annuity: block 'Table' is not in /blocks — port it before importing",
+      "/fragments/agent-prefix/zurich: block 'Table' is not in /blocks — port it before importing",
+      "/fragments/agent-prefix/transamerica: block 'Table' is not in /blocks — port it before importing",
+      "/fragments/agent-prefix/first-allmerica: block 'Table' is not in /blocks — port it before importing",
+      "/fragments/agent-prefix/fidelity-mutual: block 'Table' is not in /blocks — port it before importing"
+    ],
+    "dropped": [],
+    "assets": [
+      "https://commonwealth.globalatlantic.com/sites/commonwealth/files/2021-08/cwa_agent.jpg"
+    ]
+  },
+  {
+    "slug": "agentbrokers-commonwealth-annuity",
+    "url": "https://commonwealth.globalatlantic.com/agentbrokers/commonwealth-annuity",
+    "docs": [
+      {
+        "path": "/agentbrokers/commonwealth-annuity",
+        "blocks": [
+          "Hero (banner) [2r]",
+          "Metadata [1r]"
+        ],
+        "jcr": {
+          "jcr:content": [
+            "cq:template",
+            "modelFields"
+          ],
+          "root": [],
+          "section": [
+            "model",
+            "modelFields"
+          ],
+          "block": [
+            "classes",
+            "image",
+            "imageAlt",
+            "model",
+            "modelFields",
+            "name",
+            "text"
+          ],
+          "section_1": [
+            "model",
+            "modelFields"
+          ],
+          "title": [
+            "title",
+            "titleType"
+          ],
+          "text": [
+            "text"
+          ]
+        }
+      }
+    ],
+    "problems": [],
+    "blockers": [],
+    "dropped": [],
+    "assets": [
+      "https://commonwealth.globalatlantic.com/sites/commonwealth/files/2021-09/agent.jpg"
+    ]
+  },
+  {
+    "slug": "agentbrokers-fidelity-mutual",
+    "url": "https://commonwealth.globalatlantic.com/agentbrokers/fidelity-mutual",
+    "docs": [
+      {
+        "path": "/agentbrokers/fidelity-mutual",
+        "blocks": [
+          "Hero (banner) [2r]",
+          "Metadata [1r]"
+        ],
+        "jcr": {
+          "jcr:content": [
+            "cq:template",
+            "modelFields"
+          ],
+          "root": [],
+          "section": [
+            "model",
+            "modelFields"
+          ],
+          "block": [
+            "classes",
+            "image",
+            "imageAlt",
+            "model",
+            "modelFields",
+            "name",
+            "text"
+          ],
+          "section_1": [
+            "model",
+            "modelFields"
+          ],
+          "title": [
+            "title",
+            "titleType"
+          ],
+          "text": [
+            "text"
+          ]
+        }
+      }
+    ],
+    "problems": [],
+    "blockers": [],
+    "dropped": [],
+    "assets": [
+      "https://commonwealth.globalatlantic.com/sites/commonwealth/files/2021-09/agent_2.jpg"
+    ]
+  },
+  {
+    "slug": "agentbrokers-first-allmerica",
+    "url": "https://commonwealth.globalatlantic.com/agentbrokers/first-allmerica",
+    "docs": [
+      {
+        "path": "/agentbrokers/first-allmerica",
+        "blocks": [
+          "Hero (banner) [2r]",
+          "Metadata [1r]"
+        ],
+        "jcr": {
+          "jcr:content": [
+            "cq:template",
+            "modelFields"
+          ],
+          "root": [],
+          "section": [
+            "model",
+            "modelFields"
+          ],
+          "block": [
+            "classes",
+            "image",
+            "imageAlt",
+            "model",
+            "modelFields",
+            "name",
+            "text"
+          ],
+          "section_1": [
+            "model",
+            "modelFields"
+          ],
+          "title": [
+            "title",
+            "titleType"
+          ],
+          "text": [
+            "text"
+          ]
+        }
+      }
+    ],
+    "problems": [],
+    "blockers": [],
+    "dropped": [],
+    "assets": [
+      "https://commonwealth.globalatlantic.com/sites/commonwealth/files/2021-09/agent_0.jpg"
+    ]
+  },
+  {
+    "slug": "agentbrokers-transamerica",
+    "url": "https://commonwealth.globalatlantic.com/agentbrokers/transamerica",
+    "docs": [
+      {
+        "path": "/agentbrokers/transamerica",
+        "blocks": [
+          "Hero (banner) [2r]",
+          "Metadata [1r]"
+        ],
+        "jcr": {
+          "jcr:content": [
+            "cq:template",
+            "modelFields"
+          ],
+          "root": [],
+          "section": [
+            "model",
+            "modelFields"
+          ],
+          "block": [
+            "classes",
+            "image",
+            "imageAlt",
+            "model",
+            "modelFields",
+            "name",
+            "text"
+          ],
+          "section_1": [
+            "model",
+            "modelFields"
+          ],
+          "title": [
+            "title",
+            "titleType"
+          ],
+          "text": [
+            "text"
+          ]
+        }
+      }
+    ],
+    "problems": [],
+    "blockers": [],
+    "dropped": [],
+    "assets": [
+      "https://commonwealth.globalatlantic.com/sites/commonwealth/files/2021-09/agent_3.jpg"
+    ]
+  },
+  {
+    "slug": "agentbrokers-zurich-american-protective-life",
+    "url": "https://commonwealth.globalatlantic.com/agentbrokers/zurich-american-protective-life",
+    "docs": [
+      {
+        "path": "/agentbrokers/zurich-american-protective-life",
+        "blocks": [
+          "Hero (banner) [2r]",
+          "Metadata [1r]"
+        ],
+        "jcr": {
+          "jcr:content": [
+            "cq:template",
+            "modelFields"
+          ],
+          "root": [],
+          "section": [
+            "model",
+            "modelFields"
+          ],
+          "block": [
+            "classes",
+            "image",
+            "imageAlt",
+            "model",
+            "modelFields",
+            "name",
+            "text"
+          ],
+          "section_1": [
+            "model",
+            "modelFields"
+          ],
+          "title": [
+            "title",
+            "titleType"
+          ],
+          "text": [
+            "text"
+          ]
+        }
+      }
+    ],
+    "problems": [],
+    "blockers": [],
+    "dropped": [],
+    "assets": [
+      "https://commonwealth.globalatlantic.com/sites/commonwealth/files/2021-09/agent_1.jpg"
+    ]
+  },
+  {
+    "slug": "contact-us",
+    "url": "https://commonwealth.globalatlantic.com/contact-us",
+    "docs": [
+      {
+        "path": "/contact-us",
+        "blocks": [
+          "Hero (banner) [2r]",
+          "Metadata [1r]"
+        ],
+        "jcr": {
+          "jcr:content": [
+            "cq:template",
+            "modelFields"
+          ],
+          "root": [],
+          "section": [
+            "model",
+            "modelFields"
+          ],
+          "block": [
+            "classes",
+            "image",
+            "imageAlt",
+            "model",
+            "modelFields",
+            "name",
+            "text"
+          ],
+          "section_1": [
+            "model",
+            "modelFields"
+          ],
+          "title": [
+            "title",
+            "titleType"
+          ],
+          "title_1": [
+            "title",
+            "titleType"
+          ],
+          "title_2": [
+            "title",
+            "titleType"
+          ]
+        }
+      }
+    ],
+    "problems": [],
+    "blockers": [],
+    "dropped": [],
+    "assets": [
+      "https://commonwealth.globalatlantic.com/sites/commonwealth/files/2021-09/cwa_banner_anim_701x215_06.jpg"
+    ]
+  },
+  {
+    "slug": "disclosures",
+    "url": "https://commonwealth.globalatlantic.com/disclosures",
+    "docs": [
+      {
+        "path": "/disclosures",
+        "blocks": [
+          "Hero (banner) [2r]",
+          "Metadata [1r]"
+        ],
+        "jcr": {
+          "jcr:content": [
+            "cq:template",
+            "modelFields"
+          ],
+          "root": [],
+          "section": [
+            "model",
+            "modelFields"
+          ],
+          "block": [
+            "classes",
+            "image",
+            "imageAlt",
+            "model",
+            "modelFields",
+            "name",
+            "text"
+          ],
+          "section_1": [
+            "model",
+            "modelFields"
+          ],
+          "title": [
+            "title",
+            "titleType"
+          ],
+          "text": [
+            "text"
+          ]
+        }
+      }
+    ],
+    "problems": [],
+    "blockers": [],
+    "dropped": [],
+    "assets": [
+      "https://commonwealth.globalatlantic.com/sites/commonwealth/files/2021-08/disclosure.jpg"
+    ]
+  },
+  {
+    "slug": "home",
+    "url": "https://commonwealth.globalatlantic.com/",
+    "docs": [
+      {
+        "path": "/index",
+        "blocks": [
+          "Hero (banner) [2r]",
+          "Metadata [1r]"
+        ],
+        "jcr": {
+          "jcr:content": [
+            "cq:template",
+            "modelFields"
+          ],
+          "root": [],
+          "section": [
+            "model",
+            "modelFields"
+          ],
+          "block": [
+            "classes",
+            "image",
+            "imageAlt",
+            "model",
+            "modelFields",
+            "name",
+            "text"
+          ],
+          "section_1": [
+            "model",
+            "modelFields"
+          ],
+          "text": [
+            "text"
+          ]
+        }
+      }
+    ],
+    "problems": [],
+    "blockers": [],
+    "dropped": [],
+    "assets": [
+      "https://commonwealth.globalatlantic.com/sites/commonwealth/files/cw_home.jpg"
+    ]
+  },
+  {
+    "slug": "newsroom",
+    "url": "https://commonwealth.globalatlantic.com/newsroom",
+    "docs": [
+      {
+        "path": "/newsroom",
+        "blocks": [
+          "Hero (banner) [2r]",
+          "Metadata [1r]"
+        ],
+        "jcr": {
+          "jcr:content": [
+            "cq:template",
+            "modelFields"
+          ],
+          "root": [],
+          "section": [
+            "model",
+            "modelFields"
+          ],
+          "block": [
+            "classes",
+            "image",
+            "imageAlt",
+            "model",
+            "modelFields",
+            "name",
+            "text"
+          ],
+          "section_1": [
+            "model",
+            "modelFields"
+          ],
+          "title": [
+            "title",
+            "titleType"
+          ],
+          "text": [
+            "text"
+          ]
+        }
+      }
+    ],
+    "problems": [],
+    "blockers": [],
+    "dropped": [],
+    "assets": [
+      "https://commonwealth.globalatlantic.com/sites/commonwealth/files/2021-09/news.jpg",
+      "https://commonwealth.globalatlantic.com/sites/commonwealth/files/2021-09/Global_Atlantic_Financial_Group_Completes_Separation_from_Goldman_Sachs.pdf",
+      "https://commonwealth.globalatlantic.com/sites/commonwealth/files/2021-09/Primary_Press_Release_Final.pdf",
+      "https://commonwealth.globalatlantic.com/sites/commonwealth/files/2021-09/Aviva_Press_release_Close_-_Final.pdf",
+      "https://commonwealth.globalatlantic.com/sites/commonwealth/files/2021-09/Global_Atlantic_Completes_Acquisition_of_Forethought_Financial_Group.pdf"
+    ]
+  },
+  {
+    "slug": "node-101-newsroom-pdf-files",
+    "url": "https://commonwealth.globalatlantic.com/node/101",
+    "docs": [
+      {
+        "path": "/newsroom/pdf-files",
+        "blocks": [
+          "Metadata [1r]"
+        ],
+        "jcr": {
+          "jcr:content": [
+            "cq:template",
+            "modelFields"
+          ],
+          "root": [],
+          "section": [
+            "model",
+            "modelFields"
+          ],
+          "title": [
+            "title",
+            "titleType"
+          ],
+          "text": [
+            "text"
+          ]
+        }
+      }
+    ],
+    "problems": [],
+    "blockers": [],
+    "dropped": [
+      "submitted",
+      "cwadmin",
+      "tue",
+      "2021",
+      "upload",
+      "primary",
+      "press",
+      "release",
+      "final",
+      "close"
+    ],
+    "assets": [
+      "https://commonwealth.globalatlantic.com/sites/commonwealth/files/2021-09/Primary_Press_Release_Final.pdf",
+      "https://commonwealth.globalatlantic.com/sites/commonwealth/files/2021-09/Global_Atlantic_Financial_Group_Completes_Separation_from_Goldman_Sachs.pdf",
+      "https://commonwealth.globalatlantic.com/sites/commonwealth/files/2021-09/Global_Atlantic_Completes_Acquisition_of_Forethought_Financial_Group.pdf",
+      "https://commonwealth.globalatlantic.com/sites/commonwealth/files/2021-09/Aviva_Press_release_Close_-_Final.pdf"
+    ]
+  },
+  {
+    "slug": "policyholders",
+    "url": "https://commonwealth.globalatlantic.com/policyholders",
+    "docs": [
+      {
+        "path": "/policyholders",
+        "blocks": [
+          "Hero (banner) [2r]",
+          "Cards (companies) [5r]",
+          "Metadata [1r]"
+        ],
+        "jcr": {
+          "jcr:content": [
+            "cq:template",
+            "modelFields"
+          ],
+          "root": [],
+          "section": [
+            "model",
+            "modelFields"
+          ],
+          "block": [
+            "classes",
+            "filter",
+            "model",
+            "modelFields",
+            "name"
+          ],
+          "section_1": [
+            "model",
+            "modelFields"
+          ],
+          "title": [
+            "title",
+            "titleType"
+          ],
+          "text": [
+            "text"
+          ],
+          "item_0": [
+            "name",
+            "model",
+            "modelFields",
+            "text"
+          ],
+          "item_1": [
+            "name",
+            "model",
+            "modelFields",
+            "text"
+          ],
+          "item_2": [
+            "name",
+            "model",
+            "modelFields",
+            "text"
+          ],
+          "item_3": [
+            "name",
+            "model",
+            "modelFields",
+            "text"
+          ],
+          "item_4": [
+            "name",
+            "model",
+            "modelFields",
+            "text"
+          ]
+        }
+      },
+      {
+        "path": "/fragments/policy-prefix/commonwealth-annuity",
+        "blocks": [
+          "Table [40r]"
+        ],
+        "jcr": null
+      },
+      {
+        "path": "/fragments/policy-prefix/zurich",
+        "blocks": [
+          "Table [25r]"
+        ],
+        "jcr": null
+      },
+      {
+        "path": "/fragments/policy-prefix/transamerica",
+        "blocks": [
+          "Table [2r]"
+        ],
+        "jcr": null
+      },
+      {
+        "path": "/fragments/policy-prefix/first-allmerica",
+        "blocks": [
+          "Table [2r]"
+        ],
+        "jcr": null
+      },
+      {
+        "path": "/fragments/policy-prefix/fidelity-mutual",
+        "blocks": [
+          "Table [16r]"
+        ],
+        "jcr": null
+      }
+    ],
+    "problems": [],
+    "blockers": [
+      "/fragments/policy-prefix/commonwealth-annuity: block 'Table' is not in /blocks — port it before importing",
+      "/fragments/policy-prefix/zurich: block 'Table' is not in /blocks — port it before importing",
+      "/fragments/policy-prefix/transamerica: block 'Table' is not in /blocks — port it before importing",
+      "/fragments/policy-prefix/first-allmerica: block 'Table' is not in /blocks — port it before importing",
+      "/fragments/policy-prefix/fidelity-mutual: block 'Table' is not in /blocks — port it before importing"
+    ],
+    "dropped": [],
+    "assets": [
+      "https://commonwealth.globalatlantic.com/sites/commonwealth/files/2021-08/cwa_banner_anim_701x215_04_0.jpg"
+    ]
+  },
+  {
+    "slug": "policyholders-commonwealth-annuity",
+    "url": "https://commonwealth.globalatlantic.com/policyholders/commonwealth-annuity",
+    "docs": [
+      {
+        "path": "/policyholders/commonwealth-annuity",
+        "blocks": [
+          "Hero (banner) [2r]",
+          "Metadata [1r]"
+        ],
+        "jcr": {
+          "jcr:content": [
+            "cq:template",
+            "modelFields"
+          ],
+          "root": [],
+          "section": [
+            "model",
+            "modelFields"
+          ],
+          "block": [
+            "classes",
+            "image",
+            "imageAlt",
+            "model",
+            "modelFields",
+            "name",
+            "text"
+          ],
+          "section_1": [
+            "model",
+            "modelFields"
+          ],
+          "title": [
+            "title",
+            "titleType"
+          ],
+          "text": [
+            "text"
+          ]
+        }
+      }
+    ],
+    "problems": [],
+    "blockers": [],
+    "dropped": [],
+    "assets": [
+      "https://commonwealth.globalatlantic.com/sites/commonwealth/files/2021-08/Commonwealth%20Annuity.jpg"
+    ]
+  },
+  {
+    "slug": "policyholders-fidelity-mutual",
+    "url": "https://commonwealth.globalatlantic.com/policyholders/fidelity-mutual",
+    "docs": [
+      {
+        "path": "/policyholders/fidelity-mutual",
+        "blocks": [
+          "Hero (banner) [2r]",
+          "Metadata [1r]"
+        ],
+        "jcr": {
+          "jcr:content": [
+            "cq:template",
+            "modelFields"
+          ],
+          "root": [],
+          "section": [
+            "model",
+            "modelFields"
+          ],
+          "block": [
+            "classes",
+            "image",
+            "imageAlt",
+            "model",
+            "modelFields",
+            "name",
+            "text"
+          ],
+          "section_1": [
+            "model",
+            "modelFields"
+          ],
+          "title": [
+            "title",
+            "titleType"
+          ],
+          "text": [
+            "text"
+          ]
+        }
+      }
+    ],
+    "problems": [],
+    "blockers": [],
+    "dropped": [],
+    "assets": [
+      "https://commonwealth.globalatlantic.com/sites/commonwealth/files/2021-08/cwa_banner_anim_701x215_04.jpg"
+    ]
+  },
+  {
+    "slug": "policyholders-first-allmerica",
+    "url": "https://commonwealth.globalatlantic.com/policyholders/first-allmerica",
+    "docs": [
+      {
+        "path": "/policyholders/first-allmerica",
+        "blocks": [
+          "Hero (banner) [2r]",
+          "Metadata [1r]"
+        ],
+        "jcr": {
+          "jcr:content": [
+            "cq:template",
+            "modelFields"
+          ],
+          "root": [],
+          "section": [
+            "model",
+            "modelFields"
+          ],
+          "block": [
+            "classes",
+            "image",
+            "imageAlt",
+            "model",
+            "modelFields",
+            "name",
+            "text"
+          ],
+          "section_1": [
+            "model",
+            "modelFields"
+          ],
+          "title": [
+            "title",
+            "titleType"
+          ],
+          "text": [
+            "text"
+          ]
+        }
+      }
+    ],
+    "problems": [],
+    "blockers": [],
+    "dropped": [],
+    "assets": [
+      "https://commonwealth.globalatlantic.com/sites/commonwealth/files/2021-08/first-america.jpg"
+    ]
+  },
+  {
+    "slug": "policyholders-transamerica",
+    "url": "https://commonwealth.globalatlantic.com/policyholders/transamerica",
+    "docs": [
+      {
+        "path": "/policyholders/transamerica",
+        "blocks": [
+          "Hero (banner) [2r]",
+          "Metadata [1r]"
+        ],
+        "jcr": {
+          "jcr:content": [
+            "cq:template",
+            "modelFields"
+          ],
+          "root": [],
+          "section": [
+            "model",
+            "modelFields"
+          ],
+          "block": [
+            "classes",
+            "image",
+            "imageAlt",
+            "model",
+            "modelFields",
+            "name",
+            "text"
+          ],
+          "section_1": [
+            "model",
+            "modelFields"
+          ],
+          "title": [
+            "title",
+            "titleType"
+          ],
+          "text": [
+            "text"
+          ]
+        }
+      }
+    ],
+    "problems": [],
+    "blockers": [],
+    "dropped": [],
+    "assets": [
+      "https://commonwealth.globalatlantic.com/sites/commonwealth/files/2021-08/Zurich%20American-Protective%20Life_0.jpg"
+    ]
+  },
+  {
+    "slug": "policyholders-zurich-american-protective-life",
+    "url": "https://commonwealth.globalatlantic.com/policyholders/zurich-american-protective-life",
+    "docs": [
+      {
+        "path": "/policyholders/zurich-american-protective-life",
+        "blocks": [
+          "Hero (banner) [2r]",
+          "Metadata [1r]"
+        ],
+        "jcr": {
+          "jcr:content": [
+            "cq:template",
+            "modelFields"
+          ],
+          "root": [],
+          "section": [
+            "model",
+            "modelFields"
+          ],
+          "block": [
+            "classes",
+            "image",
+            "imageAlt",
+            "model",
+            "modelFields",
+            "name",
+            "text"
+          ],
+          "section_1": [
+            "model",
+            "modelFields"
+          ],
+          "title": [
+            "title",
+            "titleType"
+          ],
+          "text": [
+            "text"
+          ]
+        }
+      }
+    ],
+    "problems": [],
+    "blockers": [],
+    "dropped": [],
+    "assets": [
+      "https://commonwealth.globalatlantic.com/sites/commonwealth/files/2021-08/Zurich%20American-Protective%20Life.jpg"
+    ]
+  },
+  {
+    "slug": "products",
+    "url": "https://commonwealth.globalatlantic.com/products",
+    "docs": [
+      {
+        "path": "/products",
+        "blocks": [
+          "Hero (banner) [2r]",
+          "Metadata [1r]"
+        ],
+        "jcr": {
+          "jcr:content": [
+            "cq:template",
+            "modelFields"
+          ],
+          "root": [],
+          "section": [
+            "model",
+            "modelFields"
+          ],
+          "block": [
+            "classes",
+            "image",
+            "imageAlt",
+            "model",
+            "modelFields",
+            "name",
+            "text"
+          ],
+          "section_1": [
+            "model",
+            "modelFields"
+          ],
+          "title": [
+            "title",
+            "titleType"
+          ],
+          "text": [
+            "text"
+          ]
+        }
+      }
+    ],
+    "problems": [],
+    "blockers": [],
+    "dropped": [],
+    "assets": [
+      "https://commonwealth.globalatlantic.com/sites/commonwealth/files/2021-08/Products.jpg"
+    ]
+  },
+  {
+    "slug": "reinsurance-solutions",
+    "url": "https://commonwealth.globalatlantic.com/reinsurance-solutions",
+    "docs": [
+      {
+        "path": "/reinsurance-solutions",
+        "blocks": [
+          "Hero (banner) [2r]",
+          "Metadata [1r]"
+        ],
+        "jcr": {
+          "jcr:content": [
+            "cq:template",
+            "modelFields"
+          ],
+          "root": [],
+          "section": [
+            "model",
+            "modelFields"
+          ],
+          "block": [
+            "classes",
+            "image",
+            "imageAlt",
+            "model",
+            "modelFields",
+            "name",
+            "text"
+          ],
+          "section_1": [
+            "model",
+            "modelFields"
+          ],
+          "title": [
+            "title",
+            "titleType"
+          ],
+          "title_1": [
+            "title",
+            "titleType"
+          ]
+        }
+      }
+    ],
+    "problems": [],
+    "blockers": [],
+    "dropped": [],
+    "assets": [
+      "https://commonwealth.globalatlantic.com/sites/commonwealth/files/2021-08/Reinsurance.jpg"
+    ]
+  }
+]

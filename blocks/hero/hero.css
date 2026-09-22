@@ -35,3 +35,167 @@
     padding: 40px 32px;
   }
 }
+
+/* ---------------------------------------------------------------------------
+ * banner variant
+ *
+ * Migrated from the Drupal `.content-banner-section` band: a grey login /
+ * quick-links panel beside the page banner image, with a four-colour rule
+ * underneath. Unlike the default hero there is no text over the image, so the
+ * absolute positioning and the reserved 300px of overlay height are undone.
+ *
+ * Colours are the source theme's own values, declared block-scoped here rather
+ * than in styles.css, matching the convention set by header.css.
+ * ------------------------------------------------------------------------- */
+
+.hero.banner {
+  --banner-panel-bg: #b2b2b2;
+  --banner-panel-text: #fff;
+  --banner-button-bg: #00457c;
+  --banner-button-text: #fff;
+  --banner-strip-1: #80d5ff;
+  --banner-strip-2: #bd84ba;
+  --banner-strip-3: #e6b00f;
+  --banner-strip-4: #b9c21f;
+  --banner-gap: 4px;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  position: static;
+  min-height: 0;
+  padding: 0;
+  gap: 0;
+}
+
+/* The default hero is deliberately full-bleed; the banner sits on the normal
+   section measure instead, so the band lines up with the page content. */
+.hero-container .hero-wrapper:has(.hero.banner) {
+  max-width: 1200px;
+  padding: 0 24px;
+}
+
+/* panel */
+
+.hero.banner .hero-banner-aside {
+  order: 0;
+  box-sizing: border-box;
+  padding: 40px 15px 30px;
+  background-color: var(--banner-panel-bg);
+  color: var(--banner-panel-text);
+}
+
+.hero.banner .hero-banner-aside p {
+  margin: 0;
+  padding: 0 0 25px;
+  font-size: 13px;
+  font-weight: 700;
+
+  /* source computes 19.5px at 13px; kept as a ratio so a rescale stays true */
+  line-height: 1.5;
+}
+
+.hero.banner .hero-banner-aside ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.hero.banner .hero-banner-aside li {
+  padding: 0 0 25px;
+}
+
+.hero.banner .hero-banner-aside li:last-child,
+.hero.banner .hero-banner-aside p:last-child {
+  padding-bottom: 0;
+}
+
+/* Authors may write the links as a list or as separate paragraphs; if they
+   emphasise one, decorateButtons() turns it into a pill .button, so the
+   banner's own square treatment is restated here for every shape. */
+.hero.banner .hero-banner-aside a:any-link {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  border: 0;
+  border-radius: 0;
+  padding: 0;
+  background-color: var(--banner-button-bg);
+  color: var(--banner-button-text);
+  font-size: 16px;
+  font-weight: 400;
+
+  /* source is 16px/37px; held as a ratio so a theme rescale stays proportional */
+  line-height: 2.3125;
+  text-align: center;
+  text-decoration: none;
+}
+
+.hero.banner .hero-banner-aside a:any-link:hover {
+  background-color: var(--banner-button-bg);
+  text-decoration: underline;
+}
+
+.hero.banner .hero-banner-aside .button-wrapper {
+  margin: 0;
+  padding: 0 0 25px;
+}
+
+/* media */
+
+.hero.banner .hero-banner-media {
+  order: 1;
+  line-height: 0;
+}
+
+.hero.banner .hero-banner-media picture {
+  position: static;
+  display: block;
+  inset: auto;
+}
+
+/* Height is left intrinsic so the image keeps its own ratio: the source assets
+   are uniformly 701x215, but a hardcoded aspect-ratio would crop any asset
+   that is not. The width/height attributes on the img hold the box open. */
+.hero.banner .hero-banner-media img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: fill;
+}
+
+/* four-colour rule */
+
+.hero.banner .hero-banner-strip {
+  order: 2;
+  display: grid;
+  grid-column: 1 / -1;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--banner-gap);
+  margin-top: var(--banner-gap);
+}
+
+.hero.banner .hero-banner-strip span {
+  height: 4px;
+}
+
+.hero.banner .hero-banner-strip-segment-1 { background-color: var(--banner-strip-1); }
+.hero.banner .hero-banner-strip-segment-2 { background-color: var(--banner-strip-2); }
+.hero.banner .hero-banner-strip-segment-3 { background-color: var(--banner-strip-3); }
+.hero.banner .hero-banner-strip-segment-4 { background-color: var(--banner-strip-4); }
+
+/* The source splits the band at 768px; this snaps to the project's own 900px
+   breakpoint, so 768-899px stacks here and is side by side in the source. */
+@media (width >= 900px) {
+  .hero-container .hero-wrapper:has(.hero.banner) {
+    padding: 0 32px;
+  }
+
+  .hero.banner {
+    grid-template-columns: 1fr 3fr;
+    column-gap: var(--banner-gap);
+  }
+
+  .hero.banner .hero-banner-aside {
+    padding: 40px 40px 30px;
+  }
+}

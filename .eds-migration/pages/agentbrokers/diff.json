@@ -1,0 +1,16 @@
+{
+  "slug": "agentbrokers",
+  "source_text_length": 3461,
+  "target_text_length": 3508,
+  "dropped_words": [],
+  "source_assets": 1,
+  "target_assets": 1,
+  "problems": [],
+  "blockers": [
+    "/fragments/agent-prefix/commonwealth-annuity: block 'Table' is not in /blocks — port it before importing",
+    "/fragments/agent-prefix/zurich: block 'Table' is not in /blocks — port it before importing",
+    "/fragments/agent-prefix/transamerica: block 'Table' is not in /blocks — port it before importing",
+    "/fragments/agent-prefix/first-allmerica: block 'Table' is not in /blocks — port it before importing",
+    "/fragments/agent-prefix/fidelity-mutual: block 'Table' is not in /blocks — port it before importing"
+  ]
+}

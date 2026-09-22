@@ -1,0 +1,422 @@
+{
+  "origin": "https://commonwealth.globalatlantic.com",
+  "crawled_at": "2026-09-21T15:37:23.853Z",
+  "breakpoints": [
+    375,
+    768,
+    1440
+  ],
+  "pages_attempted": 23,
+  "pages_ok": 23,
+  "skipped_auth_gated": [
+    {
+      "path": "/node/21",
+      "reason": "Access denied"
+    },
+    {
+      "path": "/node/81",
+      "reason": "Access denied"
+    },
+    {
+      "path": "/node/86",
+      "reason": "Access denied"
+    },
+    {
+      "path": "/node/91",
+      "reason": "Access denied"
+    }
+  ],
+  "results": [
+    {
+      "slug": "home",
+      "url": "https://commonwealth.globalatlantic.com/",
+      "status": 200,
+      "ok": true,
+      "notes": [
+        "consent dismissed via #onetrust-accept-btn-handler"
+      ],
+      "title": "Commonwealth Annuity and Life Insurance Company | commonwealth",
+      "images": {
+        "total": 4,
+        "emptySrc": 0,
+        "placeholder": 0,
+        "notLoaded": 0
+      },
+      "jsErrors": 0
+    },
+    {
+      "slug": "about-us",
+      "url": "https://commonwealth.globalatlantic.com/about-us",
+      "status": 200,
+      "ok": true,
+      "notes": [
+        "consent dismissed via #onetrust-accept-btn-handler"
+      ],
+      "title": "About Us | commonwealth",
+      "images": {
+        "total": 4,
+        "emptySrc": 0,
+        "placeholder": 0,
+        "notLoaded": 0
+      },
+      "jsErrors": 0
+    },
+    {
+      "slug": "reinsurance-solutions",
+      "url": "https://commonwealth.globalatlantic.com/reinsurance-solutions",
+      "status": 200,
+      "ok": true,
+      "notes": [
+        "consent dismissed via #onetrust-accept-btn-handler"
+      ],
+      "title": "Reinsurance Solutions | commonwealth",
+      "images": {
+        "total": 4,
+        "emptySrc": 0,
+        "placeholder": 0,
+        "notLoaded": 0
+      },
+      "jsErrors": 0
+    },
+    {
+      "slug": "products",
+      "url": "https://commonwealth.globalatlantic.com/products",
+      "status": 200,
+      "ok": true,
+      "notes": [
+        "consent dismissed via #onetrust-accept-btn-handler"
+      ],
+      "title": "Products | commonwealth",
+      "images": {
+        "total": 4,
+        "emptySrc": 0,
+        "placeholder": 0,
+        "notLoaded": 0
+      },
+      "jsErrors": 0
+    },
+    {
+      "slug": "policyholders",
+      "url": "https://commonwealth.globalatlantic.com/policyholders",
+      "status": 200,
+      "ok": true,
+      "notes": [
+        "consent dismissed via #onetrust-accept-btn-handler"
+      ],
+      "title": "Policyholders | commonwealth",
+      "images": {
+        "total": 4,
+        "emptySrc": 0,
+        "placeholder": 0,
+        "notLoaded": 0
+      },
+      "jsErrors": 0
+    },
+    {
+      "slug": "policyholders-commonwealth-annuity",
+      "url": "https://commonwealth.globalatlantic.com/policyholders/commonwealth-annuity",
+      "status": 200,
+      "ok": true,
+      "notes": [
+        "consent dismissed via #onetrust-accept-btn-handler"
+      ],
+      "title": "Commonwealth Annuity | commonwealth",
+      "images": {
+        "total": 4,
+        "emptySrc": 0,
+        "placeholder": 0,
+        "notLoaded": 0
+      },
+      "jsErrors": 0
+    },
+    {
+      "slug": "policyholders-first-allmerica",
+      "url": "https://commonwealth.globalatlantic.com/policyholders/first-allmerica",
+      "status": 200,
+      "ok": true,
+      "notes": [
+        "consent dismissed via #onetrust-accept-btn-handler"
+      ],
+      "title": "First Allmerica | commonwealth",
+      "images": {
+        "total": 4,
+        "emptySrc": 0,
+        "placeholder": 0,
+        "notLoaded": 0
+      },
+      "jsErrors": 0
+    },
+    {
+      "slug": "policyholders-zurich-american-protective-life",
+      "url": "https://commonwealth.globalatlantic.com/policyholders/zurich-american-protective-life",
+      "status": 200,
+      "ok": true,
+      "notes": [
+        "consent dismissed via #onetrust-accept-btn-handler"
+      ],
+      "title": "Zurich American/Protective Life | commonwealth",
+      "images": {
+        "total": 4,
+        "emptySrc": 0,
+        "placeholder": 0,
+        "notLoaded": 0
+      },
+      "jsErrors": 0
+    },
+    {
+      "slug": "policyholders-fidelity-mutual",
+      "url": "https://commonwealth.globalatlantic.com/policyholders/fidelity-mutual",
+      "status": 200,
+      "ok": true,
+      "notes": [
+        "consent dismissed via #onetrust-accept-btn-handler"
+      ],
+      "title": "Fidelity Mutual | commonwealth",
+      "images": {
+        "total": 4,
+        "emptySrc": 0,
+        "placeholder": 0,
+        "notLoaded": 0
+      },
+      "jsErrors": 0
+    },
+    {
+      "slug": "policyholders-transamerica",
+      "url": "https://commonwealth.globalatlantic.com/policyholders/transamerica",
+      "status": 200,
+      "ok": true,
+      "notes": [
+        "consent dismissed via #onetrust-accept-btn-handler"
+      ],
+      "title": "Transamerica | commonwealth",
+      "images": {
+        "total": 4,
+        "emptySrc": 0,
+        "placeholder": 0,
+        "notLoaded": 0
+      },
+      "jsErrors": 0
+    },
+    {
+      "slug": "agentbrokers",
+      "url": "https://commonwealth.globalatlantic.com/agentbrokers",
+      "status": 200,
+      "ok": true,
+      "notes": [
+        "consent dismissed via #onetrust-accept-btn-handler"
+      ],
+      "title": "Agents/Brokers | commonwealth",
+      "images": {
+        "total": 4,
+        "emptySrc": 0,
+        "placeholder": 0,
+        "notLoaded": 0
+      },
+      "jsErrors": 0
+    },
+    {
+      "slug": "agentbrokers-commonwealth-annuity",
+      "url": "https://commonwealth.globalatlantic.com/agentbrokers/commonwealth-annuity",
+      "status": 200,
+      "ok": true,
+      "notes": [
+        "consent dismissed via #onetrust-accept-btn-handler"
+      ],
+      "title": "Commonwealth Annuity | commonwealth",
+      "images": {
+        "total": 4,
+        "emptySrc": 0,
+        "placeholder": 0,
+        "notLoaded": 0
+      },
+      "jsErrors": 0
+    },
+    {
+      "slug": "agentbrokers-first-allmerica",
+      "url": "https://commonwealth.globalatlantic.com/agentbrokers/first-allmerica",
+      "status": 200,
+      "ok": true,
+      "notes": [
+        "consent dismissed via #onetrust-accept-btn-handler"
+      ],
+      "title": "First Allmerica | commonwealth",
+      "images": {
+        "total": 4,
+        "emptySrc": 0,
+        "placeholder": 0,
+        "notLoaded": 0
+      },
+      "jsErrors": 0
+    },
+    {
+      "slug": "agentbrokers-zurich-american-protective-life",
+      "url": "https://commonwealth.globalatlantic.com/agentbrokers/zurich-american-protective-life",
+      "status": 200,
+      "ok": true,
+      "notes": [
+        "consent dismissed via #onetrust-accept-btn-handler"
+      ],
+      "title": "Zurich American/Protective Life | commonwealth",
+      "images": {
+        "total": 4,
+        "emptySrc": 0,
+        "placeholder": 0,
+        "notLoaded": 0
+      },
+      "jsErrors": 0
+    },
+    {
+      "slug": "agentbrokers-fidelity-mutual",
+      "url": "https://commonwealth.globalatlantic.com/agentbrokers/fidelity-mutual",
+      "status": 200,
+      "ok": true,
+      "notes": [
+        "consent dismissed via #onetrust-accept-btn-handler"
+      ],
+      "title": "Fidelity Mutual | commonwealth",
+      "images": {
+        "total": 4,
+        "emptySrc": 0,
+        "placeholder": 0,
+        "notLoaded": 0
+      },
+      "jsErrors": 0
+    },
+    {
+      "slug": "agentbrokers-transamerica",
+      "url": "https://commonwealth.globalatlantic.com/agentbrokers/transamerica",
+      "status": 200,
+      "ok": true,
+      "notes": [
+        "consent dismissed via #onetrust-accept-btn-handler"
+      ],
+      "title": "Transamerica | commonwealth",
+      "images": {
+        "total": 4,
+        "emptySrc": 0,
+        "placeholder": 0,
+        "notLoaded": 0
+      },
+      "jsErrors": 0
+    },
+    {
+      "slug": "contact-us",
+      "url": "https://commonwealth.globalatlantic.com/contact-us",
+      "status": 200,
+      "ok": true,
+      "notes": [
+        "consent dismissed via #onetrust-accept-btn-handler"
+      ],
+      "title": "Contact Us | commonwealth",
+      "images": {
+        "total": 4,
+        "emptySrc": 0,
+        "placeholder": 0,
+        "notLoaded": 0
+      },
+      "jsErrors": 0
+    },
+    {
+      "slug": "disclosures",
+      "url": "https://commonwealth.globalatlantic.com/disclosures",
+      "status": 200,
+      "ok": true,
+      "notes": [
+        "consent dismissed via #onetrust-accept-btn-handler"
+      ],
+      "title": "Disclosures | commonwealth",
+      "images": {
+        "total": 4,
+        "emptySrc": 0,
+        "placeholder": 0,
+        "notLoaded": 0
+      },
+      "jsErrors": 0
+    },
+    {
+      "slug": "newsroom",
+      "url": "https://commonwealth.globalatlantic.com/newsroom",
+      "status": 200,
+      "ok": true,
+      "notes": [
+        "consent dismissed via #onetrust-accept-btn-handler"
+      ],
+      "title": "Newsroom | commonwealth",
+      "images": {
+        "total": 8,
+        "emptySrc": 0,
+        "placeholder": 0,
+        "notLoaded": 0
+      },
+      "jsErrors": 0
+    },
+    {
+      "slug": "node-101-newsroom-pdf-files",
+      "url": "https://commonwealth.globalatlantic.com/node/101",
+      "status": 200,
+      "ok": true,
+      "notes": [
+        "consent dismissed via #onetrust-accept-btn-handler"
+      ],
+      "title": "Newroom PDF files | commonwealth",
+      "images": {
+        "total": 3,
+        "emptySrc": 0,
+        "placeholder": 0,
+        "notLoaded": 0
+      },
+      "jsErrors": 0
+    },
+    {
+      "slug": "node-71-testing-1",
+      "url": "https://commonwealth.globalatlantic.com/node/71",
+      "status": 200,
+      "ok": true,
+      "notes": [
+        "consent dismissed via #onetrust-accept-btn-handler"
+      ],
+      "title": "testing 1 | commonwealth",
+      "images": {
+        "total": 5,
+        "emptySrc": 0,
+        "placeholder": 0,
+        "notLoaded": 0
+      },
+      "jsErrors": 0
+    },
+    {
+      "slug": "node-76-test-2",
+      "url": "https://commonwealth.globalatlantic.com/node/76",
+      "status": 200,
+      "ok": true,
+      "notes": [
+        "consent dismissed via #onetrust-accept-btn-handler"
+      ],
+      "title": "Test 2 | commonwealth",
+      "images": {
+        "total": 3,
+        "emptySrc": 0,
+        "placeholder": 0,
+        "notLoaded": 0
+      },
+      "jsErrors": 0
+    },
+    {
+      "slug": "node-161-drupal-9-test",
+      "url": "https://commonwealth.globalatlantic.com/node/161",
+      "status": 200,
+      "ok": true,
+      "notes": [
+        "consent dismissed via #onetrust-accept-btn-handler"
+      ],
+      "title": "Drupal 9 Test | commonwealth",
+      "images": {
+        "total": 3,
+        "emptySrc": 0,
+        "placeholder": 0,
+        "notLoaded": 0
+      },
+      "jsErrors": 0
+    }
+  ]
+}

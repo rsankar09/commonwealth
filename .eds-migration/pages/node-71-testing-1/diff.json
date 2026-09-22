@@ -1,0 +1,20 @@
+{
+  "slug": "node-71-testing-1",
+  "source_text_length": 237,
+  "target_text_length": 164,
+  "dropped_words": [
+    "submitted",
+    "cwadmin",
+    "thu",
+    "2021",
+    "tags",
+    "test",
+    "log",
+    "post",
+    "comments"
+  ],
+  "source_assets": 2,
+  "target_assets": 2,
+  "problems": [],
+  "blockers": []
+}

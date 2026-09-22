@@ -1,3 +1,9 @@
 helix-importer-ui
 dompurify.min.js
 *.min.js
+
+# migration working data, not site code
+capture
+
+# migration working artefacts (verify output)
+.eds-migration

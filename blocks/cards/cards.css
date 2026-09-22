@@ -25,3 +25,108 @@
   aspect-ratio: 4 / 3;
   object-fit: cover;
 }
+
+/* A card authored without an image still delivers the empty image cell; it is
+   kept (so Universal Editor keeps the node) but must not take up space. */
+.cards .cards-card-empty {
+  margin: 0;
+}
+
+/* ---------------------------------------------------------------------------
+ * companies variant
+ *
+ * Migrated from the Drupal `.content-right-sec-bottom` block: a text-only,
+ * two-column list of insurance companies. Each card is a company name over a
+ * hairline rule, an optional former-name note, and a group of links, so the
+ * card chrome (border, background, image strip) is removed entirely.
+ *
+ * Sizes, spacing and colours are the source theme's; only the font families
+ * come from the project tokens.
+ * ------------------------------------------------------------------------- */
+
+.cards.companies {
+  --company-heading-color: #00457c;
+  --company-rule-color: #ccc;
+  --company-link-color: #c93;
+  --company-note-color: #999;
+}
+
+.cards.companies > ul {
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.cards.companies > ul > li {
+  border: 0;
+  background-color: transparent;
+}
+
+.cards.companies .cards-card-body {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.cards.companies .cards-card-body h1,
+.cards.companies .cards-card-body h2,
+.cards.companies .cards-card-body h3,
+.cards.companies .cards-card-body h4,
+.cards.companies .cards-card-body h5,
+.cards.companies .cards-card-body h6 {
+  margin: 0 0 15px;
+  border-bottom: 1px solid var(--company-rule-color);
+  padding: 0 0 5px;
+  color: var(--company-heading-color);
+  font-size: 16px;
+  font-weight: 400;
+
+  /* source computes 24px at 16px; kept as a ratio so a rescale stays true */
+  line-height: 1.5;
+}
+
+.cards.companies .cards-card-body p {
+  margin: 0 0 16px;
+}
+
+/* A heading at the top of a rich-text field arrives from the xwalk importer
+   wrapped as `<p><h2>…</h2></p>`, which the parser splits into an empty
+   paragraph followed by the heading. Without this the phantom paragraph adds
+   16px above every company name. */
+.cards .cards-card-body p:empty {
+  display: none;
+}
+
+/* the former-name note sits tight under its heading, as in the source */
+.cards.companies .cards-card-body p:last-child,
+.cards.companies .cards-card-body p:has(> em:only-child) {
+  margin-bottom: 0;
+}
+
+/* The former-name note is authored as emphasis; the source renders it small
+   and grey rather than italic. */
+.cards.companies .cards-card-body em {
+  display: block;
+  color: var(--company-note-color);
+  font-size: 9px;
+  font-style: normal;
+  line-height: 1.667;
+}
+
+.cards.companies .cards-card-body a:any-link {
+  color: var(--company-link-color);
+  text-decoration: none;
+}
+
+.cards.companies .cards-card-body a:any-link:hover {
+  color: var(--company-link-color);
+  text-decoration: underline;
+}
+
+/* The source stacks below 992px; this snaps to the project's 900px breakpoint,
+   so 900-991px is two columns here and stacked in the source. */
+@media (width >= 900px) {
+  .cards.companies > ul {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px 35px;
+  }
+}

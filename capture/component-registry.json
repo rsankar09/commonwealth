@@ -1,0 +1,251 @@
+{
+  "updated_at": "2026-09-21T18:11:15.295Z",
+  "sites": {
+    "commonwealth.globalatlantic.com": {
+      "components": {
+        "site-nav": {
+          "key": "site-nav",
+          "type": "nav",
+          "verdicts": {
+            "reuse": [
+              "about-us",
+              "agentbrokers",
+              "agentbrokers-commonwealth-annuity",
+              "agentbrokers-fidelity-mutual",
+              "agentbrokers-first-allmerica",
+              "agentbrokers-transamerica",
+              "agentbrokers-zurich-american-protective-life",
+              "contact-us",
+              "disclosures",
+              "home",
+              "newsroom",
+              "node-101-newsroom-pdf-files",
+              "node-161-drupal-9-test",
+              "node-71-testing-1",
+              "node-76-test-2",
+              "policyholders",
+              "policyholders-commonwealth-annuity",
+              "policyholders-fidelity-mutual",
+              "policyholders-first-allmerica",
+              "policyholders-transamerica",
+              "policyholders-zurich-american-protective-life",
+              "products",
+              "reinsurance-solutions"
+            ]
+          },
+          "blocks": [
+            "header"
+          ],
+          "variants": [],
+          "pages": [
+            "about-us",
+            "agentbrokers",
+            "agentbrokers-commonwealth-annuity",
+            "agentbrokers-fidelity-mutual",
+            "agentbrokers-first-allmerica",
+            "agentbrokers-transamerica",
+            "agentbrokers-zurich-american-protective-life",
+            "contact-us",
+            "disclosures",
+            "home",
+            "newsroom",
+            "node-101-newsroom-pdf-files",
+            "node-161-drupal-9-test",
+            "node-71-testing-1",
+            "node-76-test-2",
+            "policyholders",
+            "policyholders-commonwealth-annuity",
+            "policyholders-fidelity-mutual",
+            "policyholders-first-allmerica",
+            "policyholders-transamerica",
+            "policyholders-zurich-american-protective-life",
+            "products",
+            "reinsurance-solutions"
+          ]
+        },
+        "page-banner": {
+          "key": "page-banner",
+          "type": "hero",
+          "verdicts": {
+            "extend": [
+              "about-us",
+              "agentbrokers",
+              "agentbrokers-commonwealth-annuity",
+              "agentbrokers-fidelity-mutual",
+              "agentbrokers-first-allmerica",
+              "agentbrokers-transamerica",
+              "agentbrokers-zurich-american-protective-life",
+              "contact-us",
+              "disclosures",
+              "home",
+              "newsroom",
+              "node-161-drupal-9-test",
+              "policyholders",
+              "policyholders-commonwealth-annuity",
+              "policyholders-fidelity-mutual",
+              "policyholders-first-allmerica",
+              "policyholders-transamerica",
+              "policyholders-zurich-american-protective-life",
+              "products",
+              "reinsurance-solutions"
+            ]
+          },
+          "blocks": [
+            "hero"
+          ],
+          "variants": [],
+          "pages": [
+            "about-us",
+            "agentbrokers",
+            "agentbrokers-commonwealth-annuity",
+            "agentbrokers-fidelity-mutual",
+            "agentbrokers-first-allmerica",
+            "agentbrokers-transamerica",
+            "agentbrokers-zurich-american-protective-life",
+            "contact-us",
+            "disclosures",
+            "home",
+            "newsroom",
+            "node-161-drupal-9-test",
+            "policyholders",
+            "policyholders-commonwealth-annuity",
+            "policyholders-fidelity-mutual",
+            "policyholders-first-allmerica",
+            "policyholders-transamerica",
+            "policyholders-zurich-american-protective-life",
+            "products",
+            "reinsurance-solutions"
+          ]
+        },
+        "page-footer": {
+          "key": "page-footer",
+          "type": "footer",
+          "verdicts": {
+            "reuse": [
+              "about-us",
+              "agentbrokers",
+              "agentbrokers-commonwealth-annuity",
+              "agentbrokers-fidelity-mutual",
+              "agentbrokers-first-allmerica",
+              "agentbrokers-transamerica",
+              "agentbrokers-zurich-american-protective-life",
+              "contact-us",
+              "disclosures",
+              "home",
+              "newsroom",
+              "node-101-newsroom-pdf-files",
+              "node-161-drupal-9-test",
+              "node-71-testing-1",
+              "node-76-test-2",
+              "policyholders",
+              "policyholders-commonwealth-annuity",
+              "policyholders-fidelity-mutual",
+              "policyholders-first-allmerica",
+              "policyholders-transamerica",
+              "policyholders-zurich-american-protective-life",
+              "products",
+              "reinsurance-solutions"
+            ]
+          },
+          "blocks": [
+            "footer"
+          ],
+          "variants": [],
+          "pages": [
+            "about-us",
+            "agentbrokers",
+            "agentbrokers-commonwealth-annuity",
+            "agentbrokers-fidelity-mutual",
+            "agentbrokers-first-allmerica",
+            "agentbrokers-transamerica",
+            "agentbrokers-zurich-american-protective-life",
+            "contact-us",
+            "disclosures",
+            "home",
+            "newsroom",
+            "node-101-newsroom-pdf-files",
+            "node-161-drupal-9-test",
+            "node-71-testing-1",
+            "node-76-test-2",
+            "policyholders",
+            "policyholders-commonwealth-annuity",
+            "policyholders-fidelity-mutual",
+            "policyholders-first-allmerica",
+            "policyholders-transamerica",
+            "policyholders-zurich-american-protective-life",
+            "products",
+            "reinsurance-solutions"
+          ]
+        },
+        "company-link-columns": {
+          "key": "company-link-columns",
+          "type": "other",
+          "verdicts": {
+            "extend": [
+              "agentbrokers",
+              "policyholders"
+            ]
+          },
+          "blocks": [
+            "cards"
+          ],
+          "variants": [],
+          "pages": [
+            "agentbrokers",
+            "policyholders"
+          ]
+        },
+        "policy-prefix-modal": {
+          "key": "policy-prefix-modal",
+          "type": "other",
+          "verdicts": {
+            "reuse": [
+              "agentbrokers",
+              "policyholders"
+            ]
+          },
+          "blocks": [
+            "modal"
+          ],
+          "variants": [],
+          "pages": [
+            "agentbrokers",
+            "policyholders"
+          ]
+        },
+        "pdf-link-list": {
+          "key": "pdf-link-list",
+          "type": "other",
+          "verdicts": {
+            "reuse": [
+              "newsroom"
+            ]
+          },
+          "blocks": [
+            "default-content (list + links)"
+          ],
+          "variants": [],
+          "pages": [
+            "newsroom"
+          ]
+        },
+        "pdf-file-field": {
+          "key": "pdf-file-field",
+          "type": "other",
+          "verdicts": {
+            "reuse": [
+              "node-101-newsroom-pdf-files"
+            ]
+          },
+          "blocks": [
+            "default-content (list + links)"
+          ],
+          "variants": [],
+          "pages": [
+            "node-101-newsroom-pdf-files"
+          ]
+        }
+      }
+    }
+  }
+}

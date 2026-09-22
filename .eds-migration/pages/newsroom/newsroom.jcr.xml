@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0" jcr:primaryType="cq:Page">
+  <jcr:content cq:template="/libs/core/franklin/templates/page" sling:resourceType="core/franklin/components/page/v1/page" jcr:primaryType="cq:PageContent" jcr:title="Newsroom" modelFields="[jcr:title,jcr:description,keywords]">
+    <root jcr:primaryType="nt:unstructured" sling:resourceType="core/franklin/components/root/v1/root">
+      <section sling:resourceType="core/franklin/components/section/v1/section" jcr:primaryType="nt:unstructured" model="section" modelFields="[name,style]">
+        <block sling:resourceType="core/franklin/components/block/v1/block" jcr:primaryType="nt:unstructured" classes="banner" image="https://commonwealth.globalatlantic.com/sites/commonwealth/files/2021-09/news.jpg" imageAlt="news" model="hero" modelFields="[image,imageAlt,text,classes]" name="Hero" text="&lt;p&gt;Quick links:&lt;/p&gt;&lt;p&gt;&lt;a href&#x3D;&quot;/policyholders&quot;&gt;Policyholders&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;a href&#x3D;&quot;/agentbrokers&quot;&gt;Agents/Brokers&lt;/a&gt;&lt;/p&gt;"></block>
+      </section>
+      <section_1 sling:resourceType="core/franklin/components/section/v1/section" jcr:primaryType="nt:unstructured" model="section" modelFields="[name,style]">
+        <title sling:resourceType="core/franklin/components/title/v1/title" jcr:primaryType="nt:unstructured" title="Newsroom" titleType="h1"/>
+        <text sling:resourceType="core/franklin/components/text/v1/text" jcr:primaryType="nt:unstructured" text="&lt;ul&gt;
+                    &lt;li&gt;&lt;a href&#x3D;&quot;https://commonwealth.globalatlantic.com/sites/commonwealth/files/2021-09/Global_Atlantic_Financial_Group_Completes_Separation_from_Goldman_Sachs.pdf&quot;&gt;Global Atlantic Financial Group Completes Separation from Goldman Sachs&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href&#x3D;&quot;https://commonwealth.globalatlantic.com/sites/commonwealth/files/2021-09/Primary_Press_Release_Final.pdf&quot;&gt;Global Atlantic Financial Group Agrees to Acquire Forethought Financial Group&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href&#x3D;&quot;https://commonwealth.globalatlantic.com/sites/commonwealth/files/2021-09/Aviva_Press_release_Close_-_Final.pdf&quot;&gt;Global Atlantic Financial Group Completes Acquisition of Aviva USA&#x27;s Life Insurance Business&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href&#x3D;&quot;https://commonwealth.globalatlantic.com/sites/commonwealth/files/2021-09/Global_Atlantic_Completes_Acquisition_of_Forethought_Financial_Group.pdf&quot;&gt;Global Atlantic Completes Acquisition of Forethought Financial Group&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ul&gt;"/>
+      </section_1>
+    </root>
+  </jcr:content>
+</jcr:root>

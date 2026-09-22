@@ -36,8 +36,10 @@
   --heading-font-size-s: 24px;
   --heading-font-size-xs: 22px;
 
-  /* nav height */
-  --nav-height: 64px;
+  /* nav height - reserves header space pre-decoration to avoid layout shift.
+     Must match the decorated header: logo band only on mobile, logo band plus
+     the blue nav bar from 900px up (see blocks/header/header.css). */
+  --nav-height: 72px;
 }
 
 /* fallback fonts */
@@ -67,6 +69,9 @@
     --heading-font-size-m: 22px;
     --heading-font-size-s: 20px;
     --heading-font-size-xs: 18px;
+
+    /* nav height: logo band (72px) + blue nav bar (35px) */
+    --nav-height: 107px;
   }
 }
 
@@ -110,6 +115,12 @@ h6 {
   font-weight: 600;
   line-height: 1.25;
   scroll-margin: 40px;
+
+  /* Headings are largest at mobile (the 900px query reduces them), so a long
+     compound token overflows the viewport rather than wrapping - e.g.
+     "Zurich American/Protective Life" pushed the page to 469px at 375px wide,
+     because nothing breaks "American/Protective". */
+  overflow-wrap: break-word;
 }
 
 h1 { font-size: var(--heading-font-size-xxl); }
