@@ -19,11 +19,11 @@ const BRAND = {
 // Both Policyholders and Agents/Brokers expose the same five companies, each
 // under its own path prefix.
 const COMPANIES = [
-  ['Commonwealth Annuity', '/content/commonwealth/commonwealth-annuity.html'],
-  ['First Allmerica', '/content/commonwealth/first-allmerica.html'],
-  ['Zurich American/Protective Life', '/content/commonwealth/zurich-american-protective-life.html'],
-  ['Fidelity Mutual', '/content/commonwealth/fidelity-mutual.html'],
-  ['Transamerica', '/content/commonwealth/transamerica.html'],
+  ['Commonwealth Annuity', 'commonwealth-annuity.html'],
+  ['First Allmerica', 'first-allmerica.html'],
+  ['Zurich American/Protective Life', 'zurich-american-protective-life.html'],
+  ['Fidelity Mutual', 'fidelity-mutual.html'],
+  ['Transamerica', 'transamerica.html'],
 ];
 
 const companyLinks = (base) => COMPANIES.map(([label, slug]) => ({ label, href: `${base}/${slug}` }));
@@ -32,8 +32,8 @@ const NAV_ITEMS = [
   { label: 'About Us', href: '/content/commonwealth/about-us.html' },
   { label: 'Reinsurance Solutions', href: '/content/commonwealth/reinsurance-solutions.html' },
   { label: 'Products', href: '/content/commonwealth/products.html' },
-  { label: 'Policyholders', href: '/content/commonwealth/policyholders.html', children: companyLinks('/content/commonwealth/policyholders.html') },
-  { label: 'Agents/Brokers', href: '/content/commonwealth/agentbrokers.html', children: companyLinks('/content/commonwealth/agentbrokers.html') },
+  { label: 'Policyholders', href: '/content/commonwealth/policyholders.html', children: companyLinks('/content/commonwealth/policyholders') },
+  { label: 'Agents/Brokers', href: '/content/commonwealth/agentbrokers.html', children: companyLinks('/content/commonwealth/agentbrokers') },
   { label: 'Contact', href: '/content/commonwealth/contact-us.html' },
 ];
 
@@ -146,16 +146,38 @@ function toggleMenu(nav, navSections, forceExpanded = null) {
  * @param {Object} item Nav item with label and href
  * @returns {HTMLAnchorElement} The link
  */
+// function buildLink({ label, href }) {
+//   const a = document.createElement('a');
+//   a.href = href;
+//   a.textContent = label;
+//   // strip any trailing slash so '/products/' still matches '/products'
+//   const current = window.location.pathname.replace(/\/$/, '') || '/';
+//   if (href === current) a.setAttribute('aria-current', 'page');
+//   return a;
+// }
+
 function buildLink({ label, href }) {
   const a = document.createElement('a');
   a.href = href;
   a.textContent = label;
-  // strip any trailing slash so '/products/' still matches '/products'
-  const current = window.location.pathname.replace(/\/$/, '') || '/';
-  if (href === current) a.setAttribute('aria-current', 'page');
+
+  const normalize = path => {
+    path = path.replace(/\/$/, '') || '/';
+
+    if (path === '/') return '/index.html';
+
+    return path.endsWith('.html') ? path : `${path}.html`;
+  };
+
+  const current = normalize(window.location.pathname);
+  const target = normalize(new URL(a.href, window.location.origin).pathname);
+
+  if (target === current) {
+    a.setAttribute('aria-current', 'page');
+  }
+
   return a;
 }
-
 /**
  * Builds the nav DOM in the same shape loadFragment() would have produced, so
  * the toggle/keyboard helpers and header.css need no special casing.
