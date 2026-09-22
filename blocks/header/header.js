@@ -19,22 +19,22 @@ const BRAND = {
 // Both Policyholders and Agents/Brokers expose the same five companies, each
 // under its own path prefix.
 const COMPANIES = [
-  ['Commonwealth Annuity', '/content/commonwealth/commonwealth-annuity'],
-  ['First Allmerica', '/content/commonwealth/first-allmerica'],
-  ['Zurich American/Protective Life', '/content/commonwealth/zurich-american-protective-life'],
-  ['Fidelity Mutual', '/content/commonwealth/fidelity-mutual'],
-  ['Transamerica', '/content/commonwealth/transamerica'],
+  ['Commonwealth Annuity', '/content/commonwealth/commonwealth-annuity.html'],
+  ['First Allmerica', '/content/commonwealth/first-allmerica.html'],
+  ['Zurich American/Protective Life', '/content/commonwealth/zurich-american-protective-life.html'],
+  ['Fidelity Mutual', '/content/commonwealth/fidelity-mutual.html'],
+  ['Transamerica', '/content/commonwealth/transamerica.html'],
 ];
 
 const companyLinks = (base) => COMPANIES.map(([label, slug]) => ({ label, href: `${base}/${slug}` }));
 
 const NAV_ITEMS = [
-  { label: 'About Us', href: '/content/commonwealth/about-us' },
-  { label: 'Reinsurance Solutions', href: '/content/commonwealth/reinsurance-solutions' },
-  { label: 'Products', href: '/content/commonwealth/products' },
-  { label: 'Policyholders', href: '/content/commonwealth/policyholders', children: companyLinks('/content/commonwealth/policyholders') },
-  { label: 'Agents/Brokers', href: '/content/commonwealth/agentbrokers', children: companyLinks('/content/commonwealth/agentbrokers') },
-  { label: 'Contact', href: '/content/commonwealth/contact-us' },
+  { label: 'About Us', href: '/content/commonwealth/about-us.html' },
+  { label: 'Reinsurance Solutions', href: '/content/commonwealth/reinsurance-solutions.html' },
+  { label: 'Products', href: '/content/commonwealth/products.html' },
+  { label: 'Policyholders', href: '/content/commonwealth/policyholders.html', children: companyLinks('/content/commonwealth/policyholders.html') },
+  { label: 'Agents/Brokers', href: '/content/commonwealth/agentbrokers.html', children: companyLinks('/content/commonwealth/agentbrokers.html') },
+  { label: 'Contact', href: '/content/commonwealth/contact-us.html' },
 ];
 
 function closeOnEscape(e) {
