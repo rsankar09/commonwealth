@@ -19,22 +19,22 @@ const BRAND = {
 // Both Policyholders and Agents/Brokers expose the same five companies, each
 // under its own path prefix.
 const COMPANIES = [
-  ['Commonwealth Annuity', 'commonwealth-annuity'],
-  ['First Allmerica', 'first-allmerica'],
-  ['Zurich American/Protective Life', 'zurich-american-protective-life'],
-  ['Fidelity Mutual', 'fidelity-mutual'],
-  ['Transamerica', 'transamerica'],
+  ['Commonwealth Annuity', '/content/commonwealth/commonwealth-annuity'],
+  ['First Allmerica', '/content/commonwealth/first-allmerica'],
+  ['Zurich American/Protective Life', '/content/commonwealth/zurich-american-protective-life'],
+  ['Fidelity Mutual', '/content/commonwealth/fidelity-mutual'],
+  ['Transamerica', '/content/commonwealth/transamerica'],
 ];
 
 const companyLinks = (base) => COMPANIES.map(([label, slug]) => ({ label, href: `${base}/${slug}` }));
 
 const NAV_ITEMS = [
-  { label: 'About Us', href: '/about-us' },
-  { label: 'Reinsurance Solutions', href: '/reinsurance-solutions' },
-  { label: 'Products', href: '/products' },
-  { label: 'Policyholders', href: '/policyholders', children: companyLinks('/policyholders') },
-  { label: 'Agents/Brokers', href: '/agentbrokers', children: companyLinks('/agentbrokers') },
-  { label: 'Contact', href: '/contact-us' },
+  { label: 'About Us', href: '/content/commonwealth/about-us' },
+  { label: 'Reinsurance Solutions', href: '/content/commonwealth/reinsurance-solutions' },
+  { label: 'Products', href: '/content/commonwealth/products' },
+  { label: 'Policyholders', href: '/content/commonwealth/policyholders', children: companyLinks('/content/commonwealth/policyholders') },
+  { label: 'Agents/Brokers', href: '/content/commonwealth/agentbrokers', children: companyLinks('/content/commonwealth/agentbrokers') },
+  { label: 'Contact', href: '/content/commonwealth/contact-us' },
 ];
 
 function closeOnEscape(e) {
